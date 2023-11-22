@@ -1,11 +1,12 @@
-DROP DATABASE QLNHAKHOA
-GO
 USE master
 GO
+
 CREATE DATABASE QLNHAKHOA
 GO
+
 USE QLNHAKHOA
 GO
+
 -- Tao bang va rang buoc khoa chinh
 CREATE TABLE login
 (
