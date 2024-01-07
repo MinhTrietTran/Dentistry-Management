@@ -17,7 +17,7 @@ CREATE TABLE DangNhap
 
 CREATE TABLE NhanVien
 (
-    MaNV VARCHAR(50) NOT NULL,
+    MaNV INT,
     TenNV NVARCHAR(50) NOT NULL,
     PhaiNV NVARCHAR(5) CHECK(PhaiNV IN (N'Nam',N'Nữ')),
     NgaySinhNV DATE ,
@@ -25,12 +25,12 @@ CREATE TABLE NhanVien
     EmailNV VARCHAR(50) ,
     DiaChiNV NVARCHAR(50) ,
     TaiKhoanNV VARCHAR(50) ,
-    CONSTRAINT PK_NhanVien PRIMARY KEY(MaNV)
+    --CONSTRAINT PK_NhanVien PRIMARY KEY(MaNV)
 )
 
 CREATE TABLE NhaSi
 (
-    MaNS VARCHAR(50) NOT NULL,
+    MaNS INT,
     TenNS NVARCHAR(50) NOT NULL,
     PhaiNS NVARCHAR(5) CHECK(PhaiNS IN (N'Nam',N'Nữ')),
     NgaySinhNS DATE ,
@@ -38,32 +38,32 @@ CREATE TABLE NhaSi
     EmailNS VARCHAR(50) ,
     DiaChiNS NVARCHAR(50) ,
     TaiKhoanNS VARCHAR(50) ,
-    CONSTRAINT PK_NhaSi PRIMARY KEY(MaNS)
+    --CONSTRAINT PK_NhaSi PRIMARY KEY(MaNS)
 )
 
 CREATE TABLE LichLamViec
 (
-    MaNhaSi VARCHAR(50) NOT NULL,
+    MaNhaSi INT,
     ThuTrongTuan NVARCHAR(10) CHECK(ThuTrongTuan IN (N'Thứ hai', N'Thứ ba', N'Thứ tư', N'Thứ năm', N'Thứ sáu', N'Thứ bảy', N'Chủ nhật')),
     GioBatDau INT CHECK(GioBatDau IN (8,14)),
     GioKetThuc INT CHECK(GioKetThuc IN (12,18)),
-    CONSTRAINT PK_LichLamViec PRIMARY KEY(MaNhaSi,ThuTrongTuan)
+    --CONSTRAINT PK_LichLamViec PRIMARY KEY(MaNhaSi,ThuTrongTuan)
 )
 
 CREATE TABLE CuocHen
 (
-    MaCH VARCHAR(50) NOT NULL,
+    MaCH INT,
     GioCH DATETIME,
     ThuTuCH INT,
     IsLanDau BIT,
     GhiChu NVARCHAR(200),
     NgayGui DATE,
-    BenhNhan VARCHAR(50),
-    NhaSi VARCHAR(50),
-    TroLy VARCHAR(50),
+    BenhNhan INT,
+    NhaSi INT,
+    TroLy INT,
     Phong VARCHAR(10),
-    CuocHenTruocDo VARCHAR(50),
-    CONSTRAINT PK_CuocHen PRIMARY KEY(MaCH)
+    CuocHenTruocDo INT,
+    --CONSTRAINT PK_CuocHen PRIMARY KEY(MaCH)
 )
 
 CREATE TABLE Phong
@@ -74,7 +74,7 @@ CREATE TABLE Phong
 
 CREATE TABLE BenhNhan
 (
-    MaBN VARCHAR(50) NOT NULL,
+    MaBN INT,
     TenBN NVARCHAR(50) NOT NULL,
     PhaiBN NVARCHAR(5) CHECK(PhaiBN IN (N'Nam',N'Nữ')),
     DienThoaiBN VARCHAR(10),
@@ -82,52 +82,52 @@ CREATE TABLE BenhNhan
     NgaySinhBN DATE,
     ThongTinTongQuanSKRangMieng NVARCHAR(200),
     GhiChu NVARCHAR(200),
-    NhaSiMacDinh VARCHAR(50),
-    CONSTRAINT PK_BenhNhan PRIMARY KEY(MaBN)
+    NhaSiMacDinh INT,
+    --CONSTRAINT PK_BenhNhan PRIMARY KEY(MaBN)
 )
 
 CREATE TABLE ThanhToan
 (
-    MaTT VARCHAR(100) NOT NULL,
+    MaTT INT,
     TongHoaDon INT,
     DaTra INT,
     TienThoi INT,
     NgayTT DATE,
     GhiChu NVARCHAR(200),
-    BenhNhan VARCHAR(50),
+    BenhNhan INT,
     LoaiTT NVARCHAR(10), --Tien Mat hay Online
-    CONSTRAINT PK_ThanhToan PRIMARY KEY(MaTT)
+    --CONSTRAINT PK_ThanhToan PRIMARY KEY(MaTT)
 )
 
 
 CREATE TABLE KeHoachDieuTri
 (
-    MaKHDT VARCHAR(50) NOT NULL,
+    MaKHDT INT,
     MoTa NVARCHAR(200),
     NgayDieuTri DATE,
     GhiChu NVARCHAR(200), 
     TrangThai VARCHAR(10), -- yellow | blue | green
     Gia INT,
-    LieuTrinh VARCHAR(50),
-    NhaSi VARCHAR(50),
-    TroLy VARCHAR(50),
-    BenhNhan VARCHAR(50),
-    ThanhToan VARCHAR(100),
-    CONSTRAINT PK_KeHoachDieuTri PRIMARY KEY(MaKHDT)
+    LieuTrinh INT,
+    NhaSi INT,
+    TroLy INT,
+    BenhNhan INT,
+    ThanhToan INT,
+    --CONSTRAINT PK_KeHoachDieuTri PRIMARY KEY(MaKHDT)
 )
 
 CREATE TABLE LieuTrinh
 (
-    MaLT VARCHAR(50) NOT NULL,
-    TenLT NVARCHAR(50) UNIQUE,
-    CONSTRAINT PK_LieuTrinh PRIMARY KEY(MaLT)
+    MaLT INT,
+    TenLT NVARCHAR(50) NOT NULL,
+    --CONSTRAINT PK_LieuTrinh PRIMARY KEY(MaLT)
 )
 
 CREATE TABLE RangTrongKeHoach
 (
-    MaKeHoachDieuTri VARCHAR(50),
+    MaKeHoachDieuTri INT,
     SoRang INT,
-    CONSTRAINT PK_RangTrongKeHoach PRIMARY KEY(MaKeHoachDieuTri,SoRang)
+    --CONSTRAINT PK_RangTrongKeHoach PRIMARY KEY(MaKeHoachDieuTri,SoRang)
 )
 
 CREATE TABLE Rang
@@ -145,27 +145,27 @@ CREATE TABLE MatRang
 
 CREATE TABLE DonThuoc
 (
-    MADT VARCHAR(50),
+    MADT INT,
     NgayKeDon DATE,
-    BenhNhan VARCHAR(50),
-    CONSTRAINT PK_DonThuoc PRIMARY KEY(MaDT)
+    BenhNhan INT,
+    --CONSTRAINT PK_DonThuoc PRIMARY KEY(MaDT)
 )
 
 CREATE TABLE ThanhPhan -- cac thuoc duoc ke trong don thuoc
 (
-    MaDonThuoc VARCHAR(50),
-    MaThuoc VARCHAR(50),
+    MaDonThuoc INT,
+    MaThuoc INT,
     SoLuong INT,
-    CONSTRAINT PK_ThanhPhan PRIMARY KEY(MaDonThuoc, MaThuoc)
+    --CONSTRAINT PK_ThanhPhan PRIMARY KEY(MaDonThuoc, MaThuoc)
 )
 
 CREATE TABLE Thuoc
 (
-    MaThuoc VARCHAR(50) NOT NULL,
+    MaThuoc INT,
     TenThuoc NVARCHAR(50) NOT NULL,
     XuatXu NVARCHAR(50),
     CongDung NVARCHAR(200),
-    CONSTRAINT PK_Thuoc PRIMARY KEY(MaThuoc)
+    --CONSTRAINT PK_Thuoc PRIMARY KEY(MaThuoc)
 )
 
 -- Tao rang buoc khoa ngoai
