@@ -17,27 +17,52 @@ namespace Dentistry_Management
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=THANHTRUNG\PC1;Initial Catalog=QUANLYNHAKHOA;Persist Security Info=True;User ID=sa;Password=heongusi22;");
-        private void XoaBtn_Click(object sender, EventArgs e)
-        {
 
+        Modify modify = new Modify();
+        NhanVien quanLy;
+
+        private void Staffs_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                NhanVienDGV.DataSource = modify.Table("SELECT * FROM NhanVien NV ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
+
+        private void GetValuesTextBoxes()
+        {
+            int _maNV = int.Parse(MaNV.Text);
+            string _tenNV = TenNV.Text;
+            string _phaiNV = PhaiNV.Text;
+            string _ngaySinhNV = NgaySinhNV.Text;
+            string _dienThoaiNV = DienThoaiNV.Text;
+            string _emailNV = EmailNV.Text; 
+            string _diaChiNV = DiaChiNV.Text;
+            
+            quanLy = new NhanVien(_maNV,_tenNV,_phaiNV,_ngaySinhNV,_dienThoaiNV,_emailNV,_diaChiNV,"");
+        }
+
+        SqlConnection conn = new SqlConnection(@"Data Source=THANHTRUNG\PC1;Initial Catalog=QUANLYNHAKHOA;Persist Security Info=True;User ID=sa;Password=heongusi22;");
         
         private void HienThiDanhSach()
         {
             DataTable dataTable = new DataTable();
             conn.Open();
-            string Query = "SELECT * FROM NhanVien";
-            SqlDataAdapter adapter = new SqlDataAdapter(Query,conn);
-            using (SqlConnection sqlConnection = Connection.GetSqlConnection())  
+            string Query = "SELECT * FROM NhanVien NV ";
+            SqlDataAdapter adapter = new SqlDataAdapter(Query, conn);
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             adapter.Fill(dataTable);
             NhanVienDGV.DataSource = dataTable;
             conn.Close();
         }
-        
+
         private void ThemBtn_Click(object sender, EventArgs e)
         {
-            if(TenNV.Text == "" || PhaiNV.Text == "" || NgaySinhNV.Text == "" || DienThoaiNV.Text == "" || EmailNV.Text == "" || DiaChiNV.Text == "")
+            if (TenNV.Text == "" || PhaiNV.Text == "" || NgaySinhNV.Text == "" || DienThoaiNV.Text == "" || EmailNV.Text == "" || DiaChiNV.Text == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin");
             }
@@ -45,41 +70,108 @@ namespace Dentistry_Management
             {
                 try
                 {
-                    conn.Open();
-                    SqlCommand cmd = new SqlCommand("INSERT INTO NhanVien(TenNV,PhaiNV,NgaySinhNV,DienThoaiNV,EmailNV,DiaChiNV) " +
-                                                    "VALUES (@TenNV,@PhaiNV,@NgaySinhNV,@DienThoaiNV,@EmailNV,@DiaChiNV) ", conn);
-               
-                    cmd.Parameters.AddWithValue("@TenNV", TenNV.Text);
-                    cmd.Parameters.AddWithValue("@PhaiNV", PhaiNV.Text);
-                    cmd.Parameters.AddWithValue("@NgaySinhNV", NgaySinhNV.Text);
-                    cmd.Parameters.AddWithValue("@DienThoaiNV", DienThoaiNV.Text);
-                    cmd.Parameters.AddWithValue("@EmailNV", EmailNV.Text);
-                    cmd.Parameters.AddWithValue("@DiaChiNV", DiaChiNV.Text);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Thêm nhân viên thành công!@");
-                    conn.Close();
-                    HienThiDanhSach();
+                    if (MessageBox.Show("Bạn có muốn thêm nhân viên này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand("INSERT INTO NhanVien(TenNV,PhaiNV,NgaySinhNV,DienThoaiNV,EmailNV,DiaChiNV) " +
+                                                        "VALUES (@TenNV,@PhaiNV,@NgaySinhNV,@DienThoaiNV,@EmailNV,@DiaChiNV) ", conn);
+
+                        cmd.Parameters.AddWithValue("@TenNV", TenNV.Text);
+                        cmd.Parameters.AddWithValue("@PhaiNV", PhaiNV.Text);
+                        cmd.Parameters.AddWithValue("@NgaySinhNV", NgaySinhNV.Text);
+                        cmd.Parameters.AddWithValue("@DienThoaiNV", DienThoaiNV.Text);
+                        cmd.Parameters.AddWithValue("@EmailNV", EmailNV.Text);
+                        cmd.Parameters.AddWithValue("@DiaChiNV", DiaChiNV.Text);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Thêm nhân viên thành công!@");
+                        conn.Close();
+                        HienThiDanhSach();
+                    }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi thêm nhân viên: " + ex.Message);
                 }
             }
-                    
-        }
-        Modify modify = new Modify();
-        private void Staffs_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                NhanVienDGV.DataSource = modify.Table("SELECT * FROM NhanVien");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-          
 
         }
+
+        private void CapNhatBtn_Click(object sender, EventArgs e)
+        {
+            if (MaNV.Text == "" )
+            { MessageBox.Show("Vui lòng điền mã nhân viên muốn cập nhật"); }
+            else
+            {
+                try
+                {
+                    if (MessageBox.Show("Bạn có muốn sửa nhân viên này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand("UPDATE NhanVien SET TenNV = @TenNV,PhaiNV = @PhaiNV,NgaySinhNV = @NgaySinhNV,DienThoaiNV = @DienThoaiNV,EmailNV = @EmailNV,DiaChiNV = @DiaChiNV " +
+                                                        " WHERE MaNV ='" + MaNV.Text + "' ", conn);
+
+                        cmd.Parameters.AddWithValue("@TenNV", TenNV.Text);
+                        cmd.Parameters.AddWithValue("@PhaiNV", PhaiNV.Text);
+                        cmd.Parameters.AddWithValue("@NgaySinhNV", NgaySinhNV.Text);
+                        cmd.Parameters.AddWithValue("@DienThoaiNV", DienThoaiNV.Text);
+                        cmd.Parameters.AddWithValue("@EmailNV", EmailNV.Text);
+                        cmd.Parameters.AddWithValue("@DiaChiNV", DiaChiNV.Text);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Cập nhật nhân viên thành công!@");
+                        conn.Close();
+                        HienThiDanhSach();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi sửa: " + ex.Message);
+                }
+            }
+        }
+
+
+        private void NhanVienDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (NhanVienDGV.Rows.Count > 1)
+            {
+                PhaiNV.SelectedItem = NhanVienDGV.SelectedRows[0].Cells[2].Value.ToString();
+                MaNV.Text = NhanVienDGV.SelectedRows[0].Cells[0].Value.ToString();
+                TenNV.Text = NhanVienDGV.SelectedRows[0].Cells[1].Value.ToString();
+                NgaySinhNV.Text = NhanVienDGV.SelectedRows[0].Cells[3].Value.ToString();
+                DienThoaiNV.Text = NhanVienDGV.SelectedRows[0].Cells[4].Value.ToString();
+                EmailNV.Text = NhanVienDGV.SelectedRows[0].Cells[5].Value.ToString();
+                DiaChiNV.Text = NhanVienDGV.SelectedRows[0].Cells[6].Value.ToString();
+            }
+        }
+
+        private void XoaBtn_Click(object sender, EventArgs e)
+        {
+            if (NhanVienDGV.Rows.Count > 1)
+            {
+                string choose = NhanVienDGV.SelectedRows[0].Cells[0].Value.ToString();
+
+                string query = "DELETE NhanVien ";
+                query += "WHERE TenNV = '" + choose + "'";
+                try
+                {
+                    if (MessageBox.Show("Bạn có muốn xóa nhân viên này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand("DELETE NhanVien WHERE MaNV = '" + choose + "'", conn);
+                        cmd.ExecuteNonQuery();
+                        //modify.Command(query);
+                        MessageBox.Show("Xóa nhân viên thành công!");
+                        conn.Close();   
+                        Staffs_Load(sender, e);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi xóa nhân viên: " + ex.Message);
+                }
+            }
+        }
+
+      
     }
 }

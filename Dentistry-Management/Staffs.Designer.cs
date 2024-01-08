@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staffs));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.DienThoaiNV = new System.Windows.Forms.TextBox();
@@ -70,7 +68,15 @@
             this.qUANLYNHAKHOADataSet = new Dentistry_Management.QUANLYNHAKHOADataSet();
             this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nhanVienTableAdapter = new Dentistry_Management.QUANLYNHAKHOADataSetTableAdapters.NhanVienTableAdapter();
-            this.NhanVienDGV = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.quanlynhakhoaDataSet1 = new Dentistry_Management.QUANLYNHAKHOADataSet();
+            this.NhanVienDGV = new System.Windows.Forms.DataGridView();
+            this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phaiNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaySinhNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dienThoaiNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChiNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -83,13 +89,14 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanlynhakhoaDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NhanVienDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(12, 471);
+            this.pictureBox11.Location = new System.Drawing.Point(11, 590);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(53, 38);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,7 +116,7 @@
             // 
             // DienThoaiNV
             // 
-            this.DienThoaiNV.Location = new System.Drawing.Point(463, 75);
+            this.DienThoaiNV.Location = new System.Drawing.Point(747, 75);
             this.DienThoaiNV.Name = "DienThoaiNV";
             this.DienThoaiNV.Size = new System.Drawing.Size(207, 20);
             this.DienThoaiNV.TabIndex = 63;
@@ -119,7 +126,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(71, 483);
+            this.label9.Location = new System.Drawing.Point(70, 602);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 19);
             this.label9.TabIndex = 20;
@@ -138,7 +145,7 @@
             // 
             // EmailNV
             // 
-            this.EmailNV.Location = new System.Drawing.Point(463, 124);
+            this.EmailNV.Location = new System.Drawing.Point(747, 164);
             this.EmailNV.Name = "EmailNV";
             this.EmailNV.Size = new System.Drawing.Size(207, 20);
             this.EmailNV.TabIndex = 65;
@@ -148,7 +155,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(459, 52);
+            this.label2.Location = new System.Drawing.Point(743, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 19);
             this.label2.TabIndex = 62;
@@ -166,7 +173,7 @@
             // 
             // DiaChiNV
             // 
-            this.DiaChiNV.Location = new System.Drawing.Point(463, 170);
+            this.DiaChiNV.Location = new System.Drawing.Point(471, 165);
             this.DiaChiNV.Name = "DiaChiNV";
             this.DiaChiNV.Size = new System.Drawing.Size(207, 20);
             this.DiaChiNV.TabIndex = 67;
@@ -176,7 +183,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Navy;
-            this.label11.Location = new System.Drawing.Point(459, 147);
+            this.label11.Location = new System.Drawing.Point(467, 142);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 19);
             this.label11.TabIndex = 66;
@@ -263,7 +270,7 @@
             this.ThemBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ThemBtn.IdleForecolor = System.Drawing.Color.White;
             this.ThemBtn.IdleLineColor = System.Drawing.Color.Green;
-            this.ThemBtn.Location = new System.Drawing.Point(307, 220);
+            this.ThemBtn.Location = new System.Drawing.Point(290, 216);
             this.ThemBtn.Margin = new System.Windows.Forms.Padding(5);
             this.ThemBtn.Name = "ThemBtn";
             this.ThemBtn.Size = new System.Drawing.Size(91, 40);
@@ -310,19 +317,20 @@
             this.CapNhatBtn.IdleFillColor = System.Drawing.Color.SandyBrown;
             this.CapNhatBtn.IdleForecolor = System.Drawing.Color.Black;
             this.CapNhatBtn.IdleLineColor = System.Drawing.Color.SandyBrown;
-            this.CapNhatBtn.Location = new System.Drawing.Point(423, 220);
+            this.CapNhatBtn.Location = new System.Drawing.Point(579, 215);
             this.CapNhatBtn.Margin = new System.Windows.Forms.Padding(5);
             this.CapNhatBtn.Name = "CapNhatBtn";
             this.CapNhatBtn.Size = new System.Drawing.Size(91, 40);
             this.CapNhatBtn.TabIndex = 71;
             this.CapNhatBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CapNhatBtn.Click += new System.EventHandler(this.CapNhatBtn_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Navy;
-            this.label10.Location = new System.Drawing.Point(459, 101);
+            this.label10.Location = new System.Drawing.Point(743, 142);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 19);
             this.label10.TabIndex = 64;
@@ -366,7 +374,7 @@
             this.XoaBtn.IdleFillColor = System.Drawing.Color.DarkRed;
             this.XoaBtn.IdleForecolor = System.Drawing.Color.White;
             this.XoaBtn.IdleLineColor = System.Drawing.Color.DarkRed;
-            this.XoaBtn.Location = new System.Drawing.Point(542, 220);
+            this.XoaBtn.Location = new System.Drawing.Point(884, 215);
             this.XoaBtn.Margin = new System.Windows.Forms.Padding(5);
             this.XoaBtn.Name = "XoaBtn";
             this.XoaBtn.Size = new System.Drawing.Size(91, 40);
@@ -376,7 +384,7 @@
             // 
             // NgaySinhNV
             // 
-            this.NgaySinhNV.Location = new System.Drawing.Point(318, 170);
+            this.NgaySinhNV.Location = new System.Drawing.Point(337, 164);
             this.NgaySinhNV.Name = "NgaySinhNV";
             this.NgaySinhNV.Size = new System.Drawing.Size(83, 20);
             this.NgaySinhNV.TabIndex = 60;
@@ -386,7 +394,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Navy;
-            this.label17.Location = new System.Drawing.Point(315, 148);
+            this.label17.Location = new System.Drawing.Point(334, 142);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(86, 19);
             this.label17.TabIndex = 59;
@@ -398,7 +406,7 @@
             this.PhaiNV.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.PhaiNV.Location = new System.Drawing.Point(230, 171);
+            this.PhaiNV.Location = new System.Drawing.Point(230, 165);
             this.PhaiNV.Name = "PhaiNV";
             this.PhaiNV.Size = new System.Drawing.Size(69, 21);
             this.PhaiNV.TabIndex = 58;
@@ -408,7 +416,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Navy;
-            this.label16.Location = new System.Drawing.Point(226, 148);
+            this.label16.Location = new System.Drawing.Point(226, 142);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(73, 19);
             this.label16.TabIndex = 57;
@@ -416,7 +424,7 @@
             // 
             // TenNV
             // 
-            this.TenNV.Location = new System.Drawing.Point(228, 119);
+            this.TenNV.Location = new System.Drawing.Point(415, 75);
             this.TenNV.Name = "TenNV";
             this.TenNV.Size = new System.Drawing.Size(207, 20);
             this.TenNV.TabIndex = 56;
@@ -426,7 +434,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Navy;
-            this.label15.Location = new System.Drawing.Point(224, 96);
+            this.label15.Location = new System.Drawing.Point(411, 52);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(117, 19);
             this.label15.TabIndex = 55;
@@ -453,9 +461,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(742, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(991, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(25, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
@@ -481,7 +489,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 516);
+            this.panel1.Size = new System.Drawing.Size(200, 600);
             this.panel1.TabIndex = 51;
             // 
             // label12
@@ -509,38 +517,88 @@
             // 
             this.nhanVienTableAdapter.ClearBeforeFill = true;
             // 
+            // quanlynhakhoaDataSet1
+            // 
+            this.quanlynhakhoaDataSet1.DataSetName = "QUANLYNHAKHOADataSet";
+            this.quanlynhakhoaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // NhanVienDGV
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.NhanVienDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.NhanVienDGV.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.NhanVienDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.NhanVienDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.NhanVienDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.NhanVienDGV.AutoGenerateColumns = false;
+            this.NhanVienDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.NhanVienDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.NhanVienDGV.DoubleBuffered = true;
-            this.NhanVienDGV.EnableHeadersVisualStyles = false;
-            this.NhanVienDGV.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.NhanVienDGV.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.NhanVienDGV.Location = new System.Drawing.Point(203, 279);
+            this.NhanVienDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maNVDataGridViewTextBoxColumn,
+            this.tenNVDataGridViewTextBoxColumn,
+            this.phaiNVDataGridViewTextBoxColumn,
+            this.ngaySinhNVDataGridViewTextBoxColumn,
+            this.dienThoaiNVDataGridViewTextBoxColumn,
+            this.emailNVDataGridViewTextBoxColumn,
+            this.diaChiNVDataGridViewTextBoxColumn});
+            this.NhanVienDGV.DataSource = this.nhanVienBindingSource;
+            this.NhanVienDGV.Location = new System.Drawing.Point(200, 279);
             this.NhanVienDGV.Name = "NhanVienDGV";
-            this.NhanVienDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.NhanVienDGV.Size = new System.Drawing.Size(576, 237);
+            this.NhanVienDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.NhanVienDGV.Size = new System.Drawing.Size(824, 321);
             this.NhanVienDGV.TabIndex = 74;
+            this.NhanVienDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NhanVienDGV_CellClick);
+            // 
+            // maNVDataGridViewTextBoxColumn
+            // 
+            this.maNVDataGridViewTextBoxColumn.DataPropertyName = "MaNV";
+            this.maNVDataGridViewTextBoxColumn.FillWeight = 98.28742F;
+            this.maNVDataGridViewTextBoxColumn.HeaderText = "Mã nhân viên";
+            this.maNVDataGridViewTextBoxColumn.Name = "maNVDataGridViewTextBoxColumn";
+            this.maNVDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tenNVDataGridViewTextBoxColumn
+            // 
+            this.tenNVDataGridViewTextBoxColumn.DataPropertyName = "TenNV";
+            this.tenNVDataGridViewTextBoxColumn.FillWeight = 98.28742F;
+            this.tenNVDataGridViewTextBoxColumn.HeaderText = "Tên";
+            this.tenNVDataGridViewTextBoxColumn.Name = "tenNVDataGridViewTextBoxColumn";
+            // 
+            // phaiNVDataGridViewTextBoxColumn
+            // 
+            this.phaiNVDataGridViewTextBoxColumn.DataPropertyName = "PhaiNV";
+            this.phaiNVDataGridViewTextBoxColumn.FillWeight = 66.59177F;
+            this.phaiNVDataGridViewTextBoxColumn.HeaderText = "Giới tính";
+            this.phaiNVDataGridViewTextBoxColumn.Name = "phaiNVDataGridViewTextBoxColumn";
+            // 
+            // ngaySinhNVDataGridViewTextBoxColumn
+            // 
+            this.ngaySinhNVDataGridViewTextBoxColumn.DataPropertyName = "NgaySinhNV";
+            this.ngaySinhNVDataGridViewTextBoxColumn.FillWeight = 71.06599F;
+            this.ngaySinhNVDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
+            this.ngaySinhNVDataGridViewTextBoxColumn.Name = "ngaySinhNVDataGridViewTextBoxColumn";
+            // 
+            // dienThoaiNVDataGridViewTextBoxColumn
+            // 
+            this.dienThoaiNVDataGridViewTextBoxColumn.DataPropertyName = "DienThoaiNV";
+            this.dienThoaiNVDataGridViewTextBoxColumn.FillWeight = 66.89341F;
+            this.dienThoaiNVDataGridViewTextBoxColumn.HeaderText = "SĐT";
+            this.dienThoaiNVDataGridViewTextBoxColumn.Name = "dienThoaiNVDataGridViewTextBoxColumn";
+            // 
+            // emailNVDataGridViewTextBoxColumn
+            // 
+            this.emailNVDataGridViewTextBoxColumn.DataPropertyName = "EmailNV";
+            this.emailNVDataGridViewTextBoxColumn.FillWeight = 98.28742F;
+            this.emailNVDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailNVDataGridViewTextBoxColumn.Name = "emailNVDataGridViewTextBoxColumn";
+            // 
+            // diaChiNVDataGridViewTextBoxColumn
+            // 
+            this.diaChiNVDataGridViewTextBoxColumn.DataPropertyName = "DiaChiNV";
+            this.diaChiNVDataGridViewTextBoxColumn.FillWeight = 200.5866F;
+            this.diaChiNVDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
+            this.diaChiNVDataGridViewTextBoxColumn.Name = "diaChiNVDataGridViewTextBoxColumn";
             // 
             // Staffs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(783, 516);
+            this.ClientSize = new System.Drawing.Size(1024, 600);
             this.Controls.Add(this.NhanVienDGV);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.DienThoaiNV);
@@ -580,6 +638,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanlynhakhoaDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NhanVienDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -626,6 +685,14 @@
         private QUANLYNHAKHOADataSet qUANLYNHAKHOADataSet;
         private System.Windows.Forms.BindingSource nhanVienBindingSource;
         private QUANLYNHAKHOADataSetTableAdapters.NhanVienTableAdapter nhanVienTableAdapter;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid NhanVienDGV;
+        private QUANLYNHAKHOADataSet quanlynhakhoaDataSet1;
+        private System.Windows.Forms.DataGridView NhanVienDGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maNVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenNVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phaiNVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhNVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dienThoaiNVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailNVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaChiNVDataGridViewTextBoxColumn;
     }
 }

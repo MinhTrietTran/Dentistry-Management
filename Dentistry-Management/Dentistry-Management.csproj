@@ -76,6 +76,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Modify.cs" />
+    <Compile Include="NhanVien.cs" />
     <Compile Include="Patients.cs">
       <SubType>Form</SubType>
     </Compile>
