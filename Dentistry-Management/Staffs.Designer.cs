@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staffs));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.DienThoaiNV = new System.Windows.Forms.TextBox();
@@ -428,6 +429,7 @@
             this.TenNV.Name = "TenNV";
             this.TenNV.Size = new System.Drawing.Size(207, 20);
             this.TenNV.TabIndex = 56;
+            //this.TenNV.TextChanged += new System.EventHandler(this.TenNV_TextChanged);
             // 
             // label15
             // 
@@ -446,6 +448,7 @@
             this.MaNV.Name = "MaNV";
             this.MaNV.Size = new System.Drawing.Size(103, 20);
             this.MaNV.TabIndex = 54;
+            this.MaNV.TextChanged += new System.EventHandler(this.MaNV_TextChanged);
             // 
             // label1
             // 
@@ -538,10 +541,19 @@
             this.NhanVienDGV.DataSource = this.nhanVienBindingSource;
             this.NhanVienDGV.Location = new System.Drawing.Point(200, 279);
             this.NhanVienDGV.Name = "NhanVienDGV";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.NhanVienDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.NhanVienDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.NhanVienDGV.Size = new System.Drawing.Size(824, 321);
             this.NhanVienDGV.TabIndex = 74;
             this.NhanVienDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NhanVienDGV_CellClick);
+            this.NhanVienDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NhanVienDGV_CellClick);
             // 
             // maNVDataGridViewTextBoxColumn
             // 

@@ -59,7 +59,7 @@ namespace Dentistry_Management
             NhanVienDGV.DataSource = dataTable;
             conn.Close();
         }
-
+        // Them nv
         private void ThemBtn_Click(object sender, EventArgs e)
         {
             if (TenNV.Text == "" || PhaiNV.Text == "" || NgaySinhNV.Text == "" || DienThoaiNV.Text == "" || EmailNV.Text == "" || DiaChiNV.Text == "")
@@ -95,7 +95,7 @@ namespace Dentistry_Management
             }
 
         }
-
+        // Cap nhat nv
         private void CapNhatBtn_Click(object sender, EventArgs e)
         {
             if (MaNV.Text == "" )
@@ -129,21 +129,21 @@ namespace Dentistry_Management
             }
         }
 
-
+        // Xem thong tin theo hang
         private void NhanVienDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (NhanVienDGV.Rows.Count > 1)
             {
-                PhaiNV.SelectedItem = NhanVienDGV.SelectedRows[0].Cells[2].Value.ToString();
                 MaNV.Text = NhanVienDGV.SelectedRows[0].Cells[0].Value.ToString();
                 TenNV.Text = NhanVienDGV.SelectedRows[0].Cells[1].Value.ToString();
+                PhaiNV.SelectedItem = NhanVienDGV.SelectedRows[0].Cells[2].Value.ToString();
                 NgaySinhNV.Text = NhanVienDGV.SelectedRows[0].Cells[3].Value.ToString();
                 DienThoaiNV.Text = NhanVienDGV.SelectedRows[0].Cells[4].Value.ToString();
                 EmailNV.Text = NhanVienDGV.SelectedRows[0].Cells[5].Value.ToString();
                 DiaChiNV.Text = NhanVienDGV.SelectedRows[0].Cells[6].Value.ToString();
             }
         }
-
+        // Xoa nv
         private void XoaBtn_Click(object sender, EventArgs e)
         {
             if (NhanVienDGV.Rows.Count > 1)
@@ -172,6 +172,22 @@ namespace Dentistry_Management
             }
         }
 
-      
+        private void MaNV_TextChanged(object sender, EventArgs e)
+        {
+            string maNV = MaNV.Text.Trim();
+            if (maNV == "")
+            {
+                Staffs_Load(sender, e);
+
+            }
+            else
+            {
+                string query = "SELECT * FROM NhanVien WHERE MaNV LIKE '%" + maNV + "%'";
+                NhanVienDGV.DataSource = modify.Table(query);
+            }
+
+        }
+
+       
     }
 }
