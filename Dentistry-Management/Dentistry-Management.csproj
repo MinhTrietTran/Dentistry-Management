@@ -90,6 +90,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QUANLYNHAKHOADataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QUANLYNHAKHOADataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYNHAKHOADataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHAKHOADataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYNHAKHOADataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Staffs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +149,28 @@
     </None>
     <None Include="QUANLYNHAKHOADataSet.xss">
       <DependentUpon>QUANLYNHAKHOADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet1.xsc">
+      <DependentUpon>QUANLYNHAKHOADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLYNHAKHOADataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet1.xss">
+      <DependentUpon>QUANLYNHAKHOADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet2.xsc">
+      <DependentUpon>QUANLYNHAKHOADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLYNHAKHOADataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet2.xss">
+      <DependentUpon>QUANLYNHAKHOADataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
