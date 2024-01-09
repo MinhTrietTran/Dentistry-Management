@@ -34,6 +34,18 @@ namespace Dentistry_Management
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
+        // Clear text box
+        private void Clear()
+        {
+            MaNS.Text = "";
+            TenNS.Text = "";
+            PhaiNS.Text = "";
+            NgaySinhNS.Text = "";
+            DienThoaiNS.Text = "";
+            EmailNS.Text = "";
+            DiaChiNS.Text = "";
+
+        }
         // Them NS
         private void ThemBtn_Click(object sender, EventArgs e)
         {
@@ -61,6 +73,7 @@ namespace Dentistry_Management
                         MessageBox.Show("Thêm nha sĩ thành công!@");
                         conn.Close();
                         Dentist_Load(sender,e);
+                        Clear();
                     }
                 }
                 catch (Exception ex)
@@ -95,7 +108,7 @@ namespace Dentistry_Management
                     if (MessageBox.Show("Bạn có muốn sửa nha sĩ này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         conn.Open();
-                        SqlCommand cmd = new SqlCommand("UPDATE NhanVien SET TenNS = @TenNS,PhaiNS = @PhaiNS,NgaySinhNS = @NgaySinhNS,DienThoaiNS = @DienThoaiNS,EmailNS = @EmailNS,DiaChiNS = @DiaChiNS " +
+                        SqlCommand cmd = new SqlCommand("UPDATE NhaSi SET TenNS = @TenNS,PhaiNS = @PhaiNS,NgaySinhNS = @NgaySinhNS,DienThoaiNS = @DienThoaiNS,EmailNS = @EmailNS,DiaChiNS = @DiaChiNS " +
                                                         " WHERE MaNS ='" + MaNS.Text + "' ", conn);
 
                         cmd.Parameters.AddWithValue("@TenNS", TenNS.Text);
@@ -108,11 +121,41 @@ namespace Dentistry_Management
                         MessageBox.Show("Cập nhật nha sĩ thành công!@");
                         conn.Close();
                         Dentist_Load(sender, e);
+                        Clear();
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi sửa: " + ex.Message);
+                }
+            }
+        }
+
+        private void XoaBtn_Click(object sender, EventArgs e)
+        {
+            if (NhaSiDGV.Rows.Count > 1)
+            {
+                string choose = NhaSiDGV.SelectedRows[0].Cells[0].Value.ToString();
+
+                string query = "DELETE NhaSi ";
+                query += "WHERE TenNS = '" + choose + "'";
+                try
+                {
+                    if (MessageBox.Show("Bạn có muốn xóa nha sĩ này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand("DELETE NhaSi WHERE MaNS = '" + choose + "'", conn);
+                        cmd.ExecuteNonQuery();
+                        //modify.Command(query);
+                        MessageBox.Show("Xóa nha sĩ thành công!");
+                        conn.Close();
+                        Dentist_Load(sender, e);
+                        Clear();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi xóa nha sĩ: " + ex.Message);
                 }
             }
         }
