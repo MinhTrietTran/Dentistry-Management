@@ -21,6 +21,18 @@ namespace Dentistry_Management
         Modify modify = new Modify();
         NhanVien quanLy;
 
+        private void Clear()
+        {
+            MaNV.Text = "";
+            TenNV.Text = "";
+            PhaiNV.Text = "";
+            NgaySinhNV.Text = "";
+            DienThoaiNV.Text = "";
+            EmailNV.Text = "";
+            DiaChiNV.Text = "";
+
+        }
+
         private void Staffs_Load(object sender, EventArgs e)
         {
             try
@@ -58,6 +70,7 @@ namespace Dentistry_Management
             adapter.Fill(dataTable);
             NhanVienDGV.DataSource = dataTable;
             conn.Close();
+            Clear();
         }
         // Them nv
         private void ThemBtn_Click(object sender, EventArgs e)
@@ -150,8 +163,6 @@ namespace Dentistry_Management
             {
                 string choose = NhanVienDGV.SelectedRows[0].Cells[0].Value.ToString();
 
-                string query = "DELETE NhanVien ";
-                query += "WHERE TenNV = '" + choose + "'";
                 try
                 {
                     if (MessageBox.Show("Bạn có muốn xóa nhân viên này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -162,7 +173,7 @@ namespace Dentistry_Management
                         //modify.Command(query);
                         MessageBox.Show("Xóa nhân viên thành công!");
                         conn.Close();   
-                        Staffs_Load(sender, e);
+                        HienThiDanhSach();
                     }
                 }
                 catch (Exception ex)

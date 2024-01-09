@@ -66,6 +66,12 @@
             this.XoaBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.ChiTietLichTrinhBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.NhaSiDGV = new System.Windows.Forms.DataGridView();
+            this.nhaSiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qUANLYNHAKHOADataSet2 = new Dentistry_Management.QUANLYNHAKHOADataSet2();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LichLamViecDGV = new System.Windows.Forms.DataGridView();
+            this.label13 = new System.Windows.Forms.Label();
+            this.nhaSiTableAdapter = new Dentistry_Management.QUANLYNHAKHOADataSet2TableAdapters.NhaSiTableAdapter();
             this.maNSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phaiNSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,12 +79,6 @@
             this.dienThoaiNSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailNSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChiNSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nhaSiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qUANLYNHAKHOADataSet2 = new Dentistry_Management.QUANLYNHAKHOADataSet2();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LichLamViecDGV = new System.Windows.Forms.DataGridView();
-            this.label13 = new System.Windows.Forms.Label();
-            this.nhaSiTableAdapter = new Dentistry_Management.QUANLYNHAKHOADataSet2TableAdapters.NhaSiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -541,49 +541,6 @@
             this.NhaSiDGV.TabIndex = 51;
             this.NhaSiDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NhaSiDGV_CellContentClick);
             // 
-            // maNSDataGridViewTextBoxColumn
-            // 
-            this.maNSDataGridViewTextBoxColumn.DataPropertyName = "MaNS";
-            this.maNSDataGridViewTextBoxColumn.HeaderText = "MaNS";
-            this.maNSDataGridViewTextBoxColumn.Name = "maNSDataGridViewTextBoxColumn";
-            this.maNSDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tenNSDataGridViewTextBoxColumn
-            // 
-            this.tenNSDataGridViewTextBoxColumn.DataPropertyName = "TenNS";
-            this.tenNSDataGridViewTextBoxColumn.HeaderText = "TenNS";
-            this.tenNSDataGridViewTextBoxColumn.Name = "tenNSDataGridViewTextBoxColumn";
-            // 
-            // phaiNSDataGridViewTextBoxColumn
-            // 
-            this.phaiNSDataGridViewTextBoxColumn.DataPropertyName = "PhaiNS";
-            this.phaiNSDataGridViewTextBoxColumn.HeaderText = "PhaiNS";
-            this.phaiNSDataGridViewTextBoxColumn.Name = "phaiNSDataGridViewTextBoxColumn";
-            // 
-            // ngaySinhNSDataGridViewTextBoxColumn
-            // 
-            this.ngaySinhNSDataGridViewTextBoxColumn.DataPropertyName = "NgaySinhNS";
-            this.ngaySinhNSDataGridViewTextBoxColumn.HeaderText = "NgaySinhNS";
-            this.ngaySinhNSDataGridViewTextBoxColumn.Name = "ngaySinhNSDataGridViewTextBoxColumn";
-            // 
-            // dienThoaiNSDataGridViewTextBoxColumn
-            // 
-            this.dienThoaiNSDataGridViewTextBoxColumn.DataPropertyName = "DienThoaiNS";
-            this.dienThoaiNSDataGridViewTextBoxColumn.HeaderText = "DienThoaiNS";
-            this.dienThoaiNSDataGridViewTextBoxColumn.Name = "dienThoaiNSDataGridViewTextBoxColumn";
-            // 
-            // emailNSDataGridViewTextBoxColumn
-            // 
-            this.emailNSDataGridViewTextBoxColumn.DataPropertyName = "EmailNS";
-            this.emailNSDataGridViewTextBoxColumn.HeaderText = "EmailNS";
-            this.emailNSDataGridViewTextBoxColumn.Name = "emailNSDataGridViewTextBoxColumn";
-            // 
-            // diaChiNSDataGridViewTextBoxColumn
-            // 
-            this.diaChiNSDataGridViewTextBoxColumn.DataPropertyName = "DiaChiNS";
-            this.diaChiNSDataGridViewTextBoxColumn.HeaderText = "DiaChiNS";
-            this.diaChiNSDataGridViewTextBoxColumn.Name = "diaChiNSDataGridViewTextBoxColumn";
-            // 
             // nhaSiBindingSource
             // 
             this.nhaSiBindingSource.DataMember = "NhaSi";
@@ -626,6 +583,56 @@
             // nhaSiTableAdapter
             // 
             this.nhaSiTableAdapter.ClearBeforeFill = true;
+            // 
+            // maNSDataGridViewTextBoxColumn
+            // 
+            this.maNSDataGridViewTextBoxColumn.DataPropertyName = "MaNS";
+            this.maNSDataGridViewTextBoxColumn.FillWeight = 97.31127F;
+            this.maNSDataGridViewTextBoxColumn.HeaderText = "Mã nha sĩ";
+            this.maNSDataGridViewTextBoxColumn.Name = "maNSDataGridViewTextBoxColumn";
+            this.maNSDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tenNSDataGridViewTextBoxColumn
+            // 
+            this.tenNSDataGridViewTextBoxColumn.DataPropertyName = "TenNS";
+            this.tenNSDataGridViewTextBoxColumn.FillWeight = 97.31127F;
+            this.tenNSDataGridViewTextBoxColumn.HeaderText = "Tên";
+            this.tenNSDataGridViewTextBoxColumn.Name = "tenNSDataGridViewTextBoxColumn";
+            // 
+            // phaiNSDataGridViewTextBoxColumn
+            // 
+            this.phaiNSDataGridViewTextBoxColumn.DataPropertyName = "PhaiNS";
+            this.phaiNSDataGridViewTextBoxColumn.FillWeight = 70.38667F;
+            this.phaiNSDataGridViewTextBoxColumn.HeaderText = "Giới tính";
+            this.phaiNSDataGridViewTextBoxColumn.Name = "phaiNSDataGridViewTextBoxColumn";
+            // 
+            // ngaySinhNSDataGridViewTextBoxColumn
+            // 
+            this.ngaySinhNSDataGridViewTextBoxColumn.DataPropertyName = "NgaySinhNS";
+            this.ngaySinhNSDataGridViewTextBoxColumn.FillWeight = 97.31127F;
+            this.ngaySinhNSDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
+            this.ngaySinhNSDataGridViewTextBoxColumn.Name = "ngaySinhNSDataGridViewTextBoxColumn";
+            // 
+            // dienThoaiNSDataGridViewTextBoxColumn
+            // 
+            this.dienThoaiNSDataGridViewTextBoxColumn.DataPropertyName = "DienThoaiNS";
+            this.dienThoaiNSDataGridViewTextBoxColumn.FillWeight = 67.51269F;
+            this.dienThoaiNSDataGridViewTextBoxColumn.HeaderText = "Điện thoại";
+            this.dienThoaiNSDataGridViewTextBoxColumn.Name = "dienThoaiNSDataGridViewTextBoxColumn";
+            // 
+            // emailNSDataGridViewTextBoxColumn
+            // 
+            this.emailNSDataGridViewTextBoxColumn.DataPropertyName = "EmailNS";
+            this.emailNSDataGridViewTextBoxColumn.FillWeight = 97.31127F;
+            this.emailNSDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailNSDataGridViewTextBoxColumn.Name = "emailNSDataGridViewTextBoxColumn";
+            // 
+            // diaChiNSDataGridViewTextBoxColumn
+            // 
+            this.diaChiNSDataGridViewTextBoxColumn.DataPropertyName = "DiaChiNS";
+            this.diaChiNSDataGridViewTextBoxColumn.FillWeight = 172.8556F;
+            this.diaChiNSDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
+            this.diaChiNSDataGridViewTextBoxColumn.Name = "diaChiNSDataGridViewTextBoxColumn";
             // 
             // Dentist
             // 
