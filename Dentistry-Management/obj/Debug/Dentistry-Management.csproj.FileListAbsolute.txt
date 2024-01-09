@@ -1,7 +1,6 @@
 C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\bin\Debug\Dentistry-Management.exe.config
 C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\bin\Debug\Dentistry-Management.exe
 C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\bin\Debug\Dentistry-Management.pdb
-C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\bin\Debug\Bunifu_UI_v1.5.3.dll
 C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\obj\Debug\Dentistry-Management.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\obj\Debug\Dentistry_Management.Homes.resources
 C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\obj\Debug\Dentistry_Management.Login.resources
