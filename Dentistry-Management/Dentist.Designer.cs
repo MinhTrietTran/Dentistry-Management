@@ -467,6 +467,7 @@
             this.CapNhatBtn.Size = new System.Drawing.Size(91, 40);
             this.CapNhatBtn.TabIndex = 48;
             this.CapNhatBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CapNhatBtn.Click += new System.EventHandler(this.CapNhatBtn_Click);
             // 
             // XoaBtn
             // 

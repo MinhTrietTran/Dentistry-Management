@@ -83,5 +83,38 @@ namespace Dentistry_Management
                 DiaChiNS.Text = NhaSiDGV.SelectedRows[0].Cells[6].Value.ToString();
             }
         }
+
+        private void CapNhatBtn_Click(object sender, EventArgs e)
+        {
+            if (MaNS.Text == "")
+            { MessageBox.Show("Vui lòng điền mã nha sĩ muốn cập nhật"); }
+            else
+            {
+                try
+                {
+                    if (MessageBox.Show("Bạn có muốn sửa nha sĩ này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand("UPDATE NhanVien SET TenNS = @TenNS,PhaiNS = @PhaiNS,NgaySinhNS = @NgaySinhNS,DienThoaiNS = @DienThoaiNS,EmailNS = @EmailNS,DiaChiNS = @DiaChiNS " +
+                                                        " WHERE MaNS ='" + MaNS.Text + "' ", conn);
+
+                        cmd.Parameters.AddWithValue("@TenNS", TenNS.Text);
+                        cmd.Parameters.AddWithValue("@PhaiNS", PhaiNS.Text);
+                        cmd.Parameters.AddWithValue("@NgaySinhNS", NgaySinhNS.Text);
+                        cmd.Parameters.AddWithValue("@DienThoaiNS", DienThoaiNS.Text);
+                        cmd.Parameters.AddWithValue("@EmailNS", EmailNS.Text);
+                        cmd.Parameters.AddWithValue("@DiaChiNS", DiaChiNS.Text);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Cập nhật nha sĩ thành công!@");
+                        conn.Close();
+                        Dentist_Load(sender, e);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi sửa: " + ex.Message);
+                }
+            }
+        }
     }
 }
