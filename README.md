@@ -23,4 +23,3 @@ Kết nối cơ sở dữ liệu: Chạy code sql, vô VS view->server explorer-
 Tạo kết nối thì chỗ này tui viết code hơi lung tung nên ae coi dưới báo lỗi connection sửa lại đường dẫn giống local máy mình. Mốt tui sẽ thống nhất vô class Connection chỉ cần vô đó sửa.
 
 Build-> run code trong Program.cs
-
