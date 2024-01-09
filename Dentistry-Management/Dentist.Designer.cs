@@ -493,6 +493,7 @@
             this.XoaBtn.Size = new System.Drawing.Size(91, 40);
             this.XoaBtn.TabIndex = 49;
             this.XoaBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.XoaBtn.Click += new System.EventHandler(this.XoaBtn_Click);
             // 
             // ChiTietLichTrinhBtn
             // 
