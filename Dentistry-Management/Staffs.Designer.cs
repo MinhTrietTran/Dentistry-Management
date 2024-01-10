@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staffs));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.DienThoaiNV = new System.Windows.Forms.TextBox();
@@ -55,7 +55,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.XoaBtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.NgaySinhNV = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.PhaiNV = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -78,6 +77,7 @@
             this.dienThoaiNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChiNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinhNV = new Bunifu.Framework.UI.BunifuDatepicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -174,7 +174,7 @@
             // 
             // DiaChiNV
             // 
-            this.DiaChiNV.Location = new System.Drawing.Point(471, 165);
+            this.DiaChiNV.Location = new System.Drawing.Point(522, 165);
             this.DiaChiNV.Name = "DiaChiNV";
             this.DiaChiNV.Size = new System.Drawing.Size(207, 20);
             this.DiaChiNV.TabIndex = 67;
@@ -184,7 +184,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Navy;
-            this.label11.Location = new System.Drawing.Point(467, 142);
+            this.label11.Location = new System.Drawing.Point(518, 142);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 19);
             this.label11.TabIndex = 66;
@@ -383,13 +383,6 @@
             this.XoaBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.XoaBtn.Click += new System.EventHandler(this.XoaBtn_Click);
             // 
-            // NgaySinhNV
-            // 
-            this.NgaySinhNV.Location = new System.Drawing.Point(337, 164);
-            this.NgaySinhNV.Name = "NgaySinhNV";
-            this.NgaySinhNV.Size = new System.Drawing.Size(83, 20);
-            this.NgaySinhNV.TabIndex = 60;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -469,6 +462,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
@@ -540,14 +534,14 @@
             this.NhanVienDGV.DataSource = this.nhanVienBindingSource;
             this.NhanVienDGV.Location = new System.Drawing.Point(200, 279);
             this.NhanVienDGV.Name = "NhanVienDGV";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.NhanVienDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.NhanVienDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.NhanVienDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.NhanVienDGV.Size = new System.Drawing.Size(824, 321);
             this.NhanVienDGV.TabIndex = 74;
@@ -604,12 +598,27 @@
             this.diaChiNVDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
             this.diaChiNVDataGridViewTextBoxColumn.Name = "diaChiNVDataGridViewTextBoxColumn";
             // 
+            // NgaySinhNV
+            // 
+            this.NgaySinhNV.BackColor = System.Drawing.Color.Black;
+            this.NgaySinhNV.BorderRadius = 0;
+            this.NgaySinhNV.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NgaySinhNV.ForeColor = System.Drawing.Color.White;
+            this.NgaySinhNV.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.NgaySinhNV.FormatCustom = null;
+            this.NgaySinhNV.Location = new System.Drawing.Point(338, 165);
+            this.NgaySinhNV.Name = "NgaySinhNV";
+            this.NgaySinhNV.Size = new System.Drawing.Size(150, 31);
+            this.NgaySinhNV.TabIndex = 75;
+            this.NgaySinhNV.Value = new System.DateTime(2024, 1, 10, 12, 29, 16, 0);
+            // 
             // Staffs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 600);
+            this.Controls.Add(this.NgaySinhNV);
             this.Controls.Add(this.NhanVienDGV);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.DienThoaiNV);
@@ -621,7 +630,6 @@
             this.Controls.Add(this.CapNhatBtn);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.XoaBtn);
-            this.Controls.Add(this.NgaySinhNV);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.PhaiNV);
             this.Controls.Add(this.label16);
@@ -682,7 +690,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuThinButton2 XoaBtn;
-        private System.Windows.Forms.TextBox NgaySinhNV;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox PhaiNV;
         private System.Windows.Forms.Label label16;
@@ -705,5 +712,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dienThoaiNVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailNVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChiNVDataGridViewTextBoxColumn;
+        private Bunifu.Framework.UI.BunifuDatepicker NgaySinhNV;
     }
 }

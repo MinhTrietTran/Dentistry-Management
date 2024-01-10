@@ -49,7 +49,7 @@ namespace Dentistry_Management
         // Them NS
         private void ThemBtn_Click(object sender, EventArgs e)
         {
-            if (TenNS.Text == "" || PhaiNS.Text == "" || NgaySinhNS.Text == "" || DienThoaiNS.Text == "" || EmailNS.Text == "" || DiaChiNS.Text == "")
+            if (TenNS.Text == "" || PhaiNS.Text == "" || DienThoaiNS.Text == "" || EmailNS.Text == "" || DiaChiNS.Text == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin");
             }
@@ -64,8 +64,8 @@ namespace Dentistry_Management
                                                         "VALUES (@TenNS,@PhaiNS,@NgaySinhNS,@DienThoaiNS,@EmailNS,@DiaChiNS) ", conn);
 
                         cmd.Parameters.AddWithValue("@TenNS", TenNS.Text);
-                        cmd.Parameters.AddWithValue("@PhaiNS", PhaiNS.Text);
-                        cmd.Parameters.AddWithValue("@NgaySinhNS", NgaySinhNS.Text);
+                        cmd.Parameters.AddWithValue("@PhaiNS", PhaiNS.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@NgaySinhNS", NgaySinhNS.Value.Date.ToString());
                         cmd.Parameters.AddWithValue("@DienThoaiNS", DienThoaiNS.Text);
                         cmd.Parameters.AddWithValue("@EmailNS", EmailNS.Text);
                         cmd.Parameters.AddWithValue("@DiaChiNS", DiaChiNS.Text);
@@ -90,7 +90,7 @@ namespace Dentistry_Management
                 MaNS.Text = NhaSiDGV.SelectedRows[0].Cells[0].Value.ToString();
                 TenNS.Text = NhaSiDGV.SelectedRows[0].Cells[1].Value.ToString();
                 PhaiNS.SelectedItem = NhaSiDGV.SelectedRows[0].Cells[2].Value.ToString();
-                NgaySinhNS.Text = NhaSiDGV.SelectedRows[0].Cells[3].Value.ToString();
+                NgaySinhNS.Value = (DateTime)NhaSiDGV.SelectedRows[0].Cells[3].Value;
                 DienThoaiNS.Text = NhaSiDGV.SelectedRows[0].Cells[4].Value.ToString();
                 EmailNS.Text = NhaSiDGV.SelectedRows[0].Cells[5].Value.ToString();
                 DiaChiNS.Text = NhaSiDGV.SelectedRows[0].Cells[6].Value.ToString();
@@ -112,8 +112,8 @@ namespace Dentistry_Management
                                                         " WHERE MaNS ='" + MaNS.Text + "' ", conn);
 
                         cmd.Parameters.AddWithValue("@TenNS", TenNS.Text);
-                        cmd.Parameters.AddWithValue("@PhaiNS", PhaiNS.Text);
-                        cmd.Parameters.AddWithValue("@NgaySinhNS", NgaySinhNS.Text);
+                        cmd.Parameters.AddWithValue("@PhaiNS", PhaiNS.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@NgaySinhNS", NgaySinhNS.Value.Date.ToString());
                         cmd.Parameters.AddWithValue("@DienThoaiNS", DienThoaiNS.Text);
                         cmd.Parameters.AddWithValue("@EmailNS", EmailNS.Text);
                         cmd.Parameters.AddWithValue("@DiaChiNS", DiaChiNS.Text);
@@ -158,6 +158,11 @@ namespace Dentistry_Management
                     MessageBox.Show("Lỗi xóa nha sĩ: " + ex.Message);
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
         }
     }
 }

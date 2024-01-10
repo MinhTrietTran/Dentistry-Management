@@ -75,7 +75,7 @@ namespace Dentistry_Management
         // Them nv
         private void ThemBtn_Click(object sender, EventArgs e)
         {
-            if (TenNV.Text == "" || PhaiNV.Text == "" || NgaySinhNV.Text == "" || DienThoaiNV.Text == "" || EmailNV.Text == "" || DiaChiNV.Text == "")
+            if (TenNV.Text == "" || PhaiNV.SelectedIndex ==-1|| DienThoaiNV.Text == "" || EmailNV.Text == "" || DiaChiNV.Text == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin");
             }
@@ -90,8 +90,8 @@ namespace Dentistry_Management
                                                         "VALUES (@TenNV,@PhaiNV,@NgaySinhNV,@DienThoaiNV,@EmailNV,@DiaChiNV) ", conn);
 
                         cmd.Parameters.AddWithValue("@TenNV", TenNV.Text);
-                        cmd.Parameters.AddWithValue("@PhaiNV", PhaiNV.Text);
-                        cmd.Parameters.AddWithValue("@NgaySinhNV", NgaySinhNV.Text);
+                        cmd.Parameters.AddWithValue("@PhaiNV", PhaiNV.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@NgaySinhNV", NgaySinhNV.Value.Date.ToString());   
                         cmd.Parameters.AddWithValue("@DienThoaiNV", DienThoaiNV.Text);
                         cmd.Parameters.AddWithValue("@EmailNV", EmailNV.Text);
                         cmd.Parameters.AddWithValue("@DiaChiNV", DiaChiNV.Text);
@@ -124,8 +124,8 @@ namespace Dentistry_Management
                                                         " WHERE MaNV ='" + MaNV.Text + "' ", conn);
 
                         cmd.Parameters.AddWithValue("@TenNV", TenNV.Text);
-                        cmd.Parameters.AddWithValue("@PhaiNV", PhaiNV.Text);
-                        cmd.Parameters.AddWithValue("@NgaySinhNV", NgaySinhNV.Text);
+                        cmd.Parameters.AddWithValue("@PhaiNV", PhaiNV.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@NgaySinhNV", NgaySinhNV.Value.Date.ToString());
                         cmd.Parameters.AddWithValue("@DienThoaiNV", DienThoaiNV.Text);
                         cmd.Parameters.AddWithValue("@EmailNV", EmailNV.Text);
                         cmd.Parameters.AddWithValue("@DiaChiNV", DiaChiNV.Text);
@@ -145,16 +145,15 @@ namespace Dentistry_Management
         // Xem thong tin theo hang
         private void NhanVienDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (NhanVienDGV.Rows.Count > 1)
-            {
+
                 MaNV.Text = NhanVienDGV.SelectedRows[0].Cells[0].Value.ToString();
                 TenNV.Text = NhanVienDGV.SelectedRows[0].Cells[1].Value.ToString();
                 PhaiNV.SelectedItem = NhanVienDGV.SelectedRows[0].Cells[2].Value.ToString();
-                NgaySinhNV.Text = NhanVienDGV.SelectedRows[0].Cells[3].Value.ToString();
-                DienThoaiNV.Text = NhanVienDGV.SelectedRows[0].Cells[4].Value.ToString();
+            NgaySinhNV.Value = (DateTime)NhanVienDGV.SelectedRows[0].Cells[3].Value;
+            DienThoaiNV.Text = NhanVienDGV.SelectedRows[0].Cells[4].Value.ToString();
                 EmailNV.Text = NhanVienDGV.SelectedRows[0].Cells[5].Value.ToString();
                 DiaChiNV.Text = NhanVienDGV.SelectedRows[0].Cells[6].Value.ToString();
-            }
+           
         }
         // Xoa nv
         private void XoaBtn_Click(object sender, EventArgs e)
@@ -199,6 +198,9 @@ namespace Dentistry_Management
 
         }
 
-       
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
