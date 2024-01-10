@@ -111,6 +111,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QUANLYNHAKHOADataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QUANLYNHAKHOADataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYNHAKHOADataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Staffs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +201,17 @@
     </None>
     <None Include="QUANLYNHAKHOADataSet3.xss">
       <DependentUpon>QUANLYNHAKHOADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet4.xsc">
+      <DependentUpon>QUANLYNHAKHOADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLYNHAKHOADataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet4.xss">
+      <DependentUpon>QUANLYNHAKHOADataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

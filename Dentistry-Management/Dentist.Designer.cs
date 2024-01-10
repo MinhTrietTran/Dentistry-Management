@@ -74,11 +74,11 @@
             this.diaChiNSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nhaSiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qUANLYNHAKHOADataSet2 = new Dentistry_Management.QUANLYNHAKHOADataSet2();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LichLamViecDGV = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.nhaSiTableAdapter = new Dentistry_Management.QUANLYNHAKHOADataSet2TableAdapters.NhaSiTableAdapter();
             this.NgaySinhNS = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -91,8 +91,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NhaSiDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhaSiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LichLamViecDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label17
@@ -152,6 +152,7 @@
             this.MaNS.Name = "MaNS";
             this.MaNS.Size = new System.Drawing.Size(103, 20);
             this.MaNS.TabIndex = 27;
+            this.MaNS.TextChanged += new System.EventHandler(this.MaNS_TextChanged);
             // 
             // label1
             // 
@@ -594,17 +595,6 @@
             this.qUANLYNHAKHOADataSet2.DataSetName = "QUANLYNHAKHOADataSet2";
             this.qUANLYNHAKHOADataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(992, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // LichLamViecDGV
             // 
             this.LichLamViecDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -637,10 +627,22 @@
             this.NgaySinhNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.NgaySinhNS.FormatCustom = null;
             this.NgaySinhNS.Location = new System.Drawing.Point(530, 41);
+            this.NgaySinhNS.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.NgaySinhNS.Name = "NgaySinhNS";
             this.NgaySinhNS.Size = new System.Drawing.Size(150, 31);
             this.NgaySinhNS.TabIndex = 76;
             this.NgaySinhNS.Value = new System.DateTime(2024, 1, 10, 12, 29, 16, 0);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(992, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Dentist
             // 
@@ -690,8 +692,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NhaSiDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhaSiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LichLamViecDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -733,7 +735,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 XoaBtn;
         private Bunifu.Framework.UI.BunifuThinButton2 ChiTietLichTrinhBtn;
         private System.Windows.Forms.DataGridView NhaSiDGV;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView LichLamViecDGV;
         private System.Windows.Forms.Label label13;
         private QUANLYNHAKHOADataSet2 qUANLYNHAKHOADataSet2;
@@ -747,5 +748,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailNSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChiNSDataGridViewTextBoxColumn;
         private Bunifu.Framework.UI.BunifuDatepicker NgaySinhNS;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
