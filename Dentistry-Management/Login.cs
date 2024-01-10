@@ -39,10 +39,10 @@ namespace Dentistry_Management
                 {
                     MessageBox.Show("Bạn chưa nhập tài khoản hoặc mật khẩu !");
                 }
-                else if (TaiKhoan.Text == "admin" && MatKhau.Text == "pwd")
+                else if (TaiKhoan.Text == "admin" && MatKhau.Text == "Triet0933")
                 {
                     QuyenTruyCap = "Admin";
-                    Patients obj = new Patients();
+                    Homes obj = new Homes();
                     obj.Show();
                     this.Hide();
                 }
@@ -65,7 +65,7 @@ namespace Dentistry_Management
                     SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM NhanVien WHERE EmailNV = '" + TaiKhoan.Text + "'", conn);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
-                    if (dt.Rows[0][0].ToString() == "1" && MatKhau.Text == "1")
+                    if (dt.Rows[0][0].ToString() == "1" && MatKhau.Text == "Triet332003")
                     {
                         QuyenTruyCap = "NhanVien";
                         Homes obj = new Homes();
@@ -91,10 +91,10 @@ namespace Dentistry_Management
                     SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM NhaSi WHERE EmailNS = '" + TaiKhoan.Text + "'", conn);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
-                    if (dt.Rows[0][0].ToString() == "1" && MatKhau.Text == "1")
+                    if (dt.Rows[0][0].ToString() == "1" && MatKhau.Text == "Triet332003")
                     {
                         QuyenTruyCap = "NhaSi";
-                        Staffs obj = new Staffs();
+                        Homes obj = new Homes();
                         obj.Show();
                         this.Hide();
                     }

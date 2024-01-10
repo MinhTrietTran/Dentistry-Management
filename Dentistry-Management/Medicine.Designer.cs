@@ -72,6 +72,8 @@
             this.qUANLYNHAKHOADataSet3 = new Dentistry_Management.QUANLYNHAKHOADataSet3();
             this.thuocTableAdapter = new Dentistry_Management.QUANLYNHAKHOADataSet3TableAdapters.ThuocTableAdapter();
             this.nhaSiTableAdapter1 = new Dentistry_Management.QUANLYNHAKHOADataSet1TableAdapters.NhaSiTableAdapter();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
@@ -99,6 +101,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // CapNhatBtn
             // 
@@ -530,6 +533,16 @@
             // 
             this.nhaSiTableAdapter1.ClearBeforeFill = true;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 35;
+            this.bunifuElipse2.TargetControl = this;
+            // 
             // Medicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -622,5 +635,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn xuatXuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn congDungDataGridViewTextBoxColumn;
         private QUANLYNHAKHOADataSet1TableAdapters.NhaSiTableAdapter nhaSiTableAdapter1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
     }
 }
