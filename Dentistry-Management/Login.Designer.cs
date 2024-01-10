@@ -37,11 +37,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Role = new System.Windows.Forms.ComboBox();
+            this.TaiKhoan = new System.Windows.Forms.TextBox();
+            this.MatKhau = new System.Windows.Forms.TextBox();
+            this.DangNhap = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.Reset = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,6 +67,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label1
             // 
@@ -116,67 +117,69 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Mật khẩu";
             // 
-            // comboBox1
+            // Role
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Role.FormattingEnabled = true;
+            this.Role.Items.AddRange(new object[] {
             "Quản trị viên",
             "Nhân viên",
             "Nha sĩ"});
-            this.comboBox1.Location = new System.Drawing.Point(88, 201);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 28);
-            this.comboBox1.TabIndex = 4;
+            this.Role.Location = new System.Drawing.Point(88, 201);
+            this.Role.Name = "Role";
+            this.Role.Size = new System.Drawing.Size(200, 28);
+            this.Role.TabIndex = 4;
             // 
-            // textBox1
+            // TaiKhoan
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 291);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 26);
-            this.textBox1.TabIndex = 5;
+            this.TaiKhoan.Location = new System.Drawing.Point(88, 291);
+            this.TaiKhoan.Name = "TaiKhoan";
+            this.TaiKhoan.Size = new System.Drawing.Size(200, 26);
+            this.TaiKhoan.TabIndex = 5;
             // 
-            // textBox2
+            // MatKhau
             // 
-            this.textBox2.Location = new System.Drawing.Point(88, 370);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 26);
-            this.textBox2.TabIndex = 6;
+            this.MatKhau.Location = new System.Drawing.Point(88, 370);
+            this.MatKhau.Name = "MatKhau";
+            this.MatKhau.Size = new System.Drawing.Size(200, 26);
+            this.MatKhau.TabIndex = 6;
             // 
-            // bunifuThinButton21
+            // DangNhap
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Đăng nhập";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Blue;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(119, 418);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(144, 40);
-            this.bunifuThinButton21.TabIndex = 7;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DangNhap.ActiveBorderThickness = 1;
+            this.DangNhap.ActiveCornerRadius = 20;
+            this.DangNhap.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.DangNhap.ActiveForecolor = System.Drawing.Color.White;
+            this.DangNhap.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.DangNhap.BackColor = System.Drawing.Color.White;
+            this.DangNhap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DangNhap.BackgroundImage")));
+            this.DangNhap.ButtonText = "Đăng nhập";
+            this.DangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DangNhap.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DangNhap.ForeColor = System.Drawing.Color.SeaGreen;
+            this.DangNhap.IdleBorderThickness = 1;
+            this.DangNhap.IdleCornerRadius = 20;
+            this.DangNhap.IdleFillColor = System.Drawing.Color.Blue;
+            this.DangNhap.IdleForecolor = System.Drawing.Color.White;
+            this.DangNhap.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.DangNhap.Location = new System.Drawing.Point(119, 418);
+            this.DangNhap.Margin = new System.Windows.Forms.Padding(5);
+            this.DangNhap.Name = "DangNhap";
+            this.DangNhap.Size = new System.Drawing.Size(144, 40);
+            this.DangNhap.TabIndex = 7;
+            this.DangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DangNhap.Click += new System.EventHandler(this.DangNhap_Click);
             // 
-            // label4
+            // Reset
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(149, 473);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 22);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Làm mới";
+            this.Reset.AutoSize = true;
+            this.Reset.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reset.ForeColor = System.Drawing.Color.Black;
+            this.Reset.Location = new System.Drawing.Point(149, 473);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(84, 22);
+            this.Reset.TabIndex = 8;
+            this.Reset.Text = "Làm mới";
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // Login
             // 
@@ -184,11 +187,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(381, 514);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.bunifuThinButton21);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Reset);
+            this.Controls.Add(this.DangNhap);
+            this.Controls.Add(this.MatKhau);
+            this.Controls.Add(this.TaiKhoan);
+            this.Controls.Add(this.Role);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -214,14 +217,14 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Role;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private Bunifu.Framework.UI.BunifuThinButton2 DangNhap;
+        private System.Windows.Forms.TextBox MatKhau;
+        private System.Windows.Forms.TextBox TaiKhoan;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Reset;
     }
 }
 

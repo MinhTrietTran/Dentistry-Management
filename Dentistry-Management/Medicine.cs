@@ -169,5 +169,10 @@ namespace Dentistry_Management
                 ThuocDGV.DataSource = modify.Table(query);
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
