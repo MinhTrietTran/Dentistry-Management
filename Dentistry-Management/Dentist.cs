@@ -39,12 +39,10 @@ namespace Dentistry_Management
         {
             MaNS.Text = "";
             TenNS.Text = "";
-            PhaiNS.Text = "";
-            NgaySinhNS.Text = "";
+            PhaiNS.SelectedIndex = -1;
             DienThoaiNS.Text = "";
             EmailNS.Text = "";
             DiaChiNS.Text = "";
-
         }
         // Them NS
         private void ThemBtn_Click(object sender, EventArgs e)
@@ -160,9 +158,26 @@ namespace Dentistry_Management
             }
         }
 
+
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit(); 
+        }
+
+        private void MaNS_TextChanged(object sender, EventArgs e)
+        {
+            string maNS = MaNS.Text.Trim();
+            if (maNS == "")
+            {
+                Dentist_Load(sender, e);
+
+            }
+            else
+            {
+                string query = "SELECT * FROM NhaSi WHERE MaNS LIKE '%" + maNS + "%'";
+                NhaSiDGV.DataSource = modify.Table(query);
+            }
         }
     }
 }
