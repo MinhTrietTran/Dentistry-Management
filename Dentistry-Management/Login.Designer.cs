@@ -142,6 +142,7 @@
             this.MatKhau.Name = "MatKhau";
             this.MatKhau.Size = new System.Drawing.Size(200, 26);
             this.MatKhau.TabIndex = 6;
+            this.MatKhau.UseSystemPasswordChar = true;
             // 
             // DangNhap
             // 
@@ -202,6 +203,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
