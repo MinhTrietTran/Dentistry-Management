@@ -84,6 +84,7 @@
             this.NhaSiMacDinh = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.benhNhanTableAdapter = new Dentistry_Management.QUANLYNHAKHOADataSet4TableAdapters.BenhNhanTableAdapter();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -697,6 +698,11 @@
             // 
             this.benhNhanTableAdapter.ClearBeforeFill = true;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 35;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // Patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -809,5 +815,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn thongTinTongQuanSKRangMiengDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ghiChuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nhaSiMacDinhDataGridViewTextBoxColumn;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

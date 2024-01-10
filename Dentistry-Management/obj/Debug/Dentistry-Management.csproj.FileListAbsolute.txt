@@ -16,3 +16,4 @@ C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\obj\De
 C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\obj\Debug\Dentistry_Management.Staffs.resources
 C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\bin\Debug\Bunifu_UI_v1.5.3.dll
 C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\obj\Debug\Dentistry_Management.Medicine.resources
+C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\obj\Debug\Dentistry_Management.Appointments.resources

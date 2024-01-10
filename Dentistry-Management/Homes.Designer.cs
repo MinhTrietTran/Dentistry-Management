@@ -165,6 +165,7 @@
             this.ThongKeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ThongKeBtn.TabIndex = 16;
             this.ThongKeBtn.TabStop = false;
+            this.ThongKeBtn.Click += new System.EventHandler(this.ThongKeBtn_Click);
             // 
             // ThuocBtn
             // 
@@ -197,6 +198,7 @@
             this.CuocHenBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.CuocHenBtn.TabIndex = 13;
             this.CuocHenBtn.TabStop = false;
+            this.CuocHenBtn.Click += new System.EventHandler(this.CuocHenBtn_Click);
             // 
             // label5
             // 
@@ -495,6 +497,7 @@
             this.Name = "Homes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Homes";
+            this.Load += new System.EventHandler(this.Homes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();

@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments.Designer.cs">
+      <DependentUpon>Appointments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="Dentist.cs">
       <SubType>Form</SubType>
@@ -116,12 +122,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QUANLYNHAKHOADataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QUANLYNHAKHOADataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYNHAKHOADataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHAKHOADataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYNHAKHOADataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHAKHOADataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYNHAKHOADataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHAKHOADataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYNHAKHOADataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Staffs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Staffs.Designer.cs">
       <DependentUpon>Staffs.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Appointments.resx">
+      <DependentUpon>Appointments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dentist.resx">
       <DependentUpon>Dentist.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +241,50 @@
     </None>
     <None Include="QUANLYNHAKHOADataSet4.xss">
       <DependentUpon>QUANLYNHAKHOADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet5.xsc">
+      <DependentUpon>QUANLYNHAKHOADataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLYNHAKHOADataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet5.xss">
+      <DependentUpon>QUANLYNHAKHOADataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet6.xsc">
+      <DependentUpon>QUANLYNHAKHOADataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLYNHAKHOADataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet6.xss">
+      <DependentUpon>QUANLYNHAKHOADataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet7.xsc">
+      <DependentUpon>QUANLYNHAKHOADataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLYNHAKHOADataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet7.xss">
+      <DependentUpon>QUANLYNHAKHOADataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet8.xsc">
+      <DependentUpon>QUANLYNHAKHOADataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLYNHAKHOADataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet8.xss">
+      <DependentUpon>QUANLYNHAKHOADataSet8.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

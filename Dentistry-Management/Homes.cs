@@ -87,5 +87,20 @@ namespace Dentistry_Management
             obj.Show();
             this.Hide();    
         }
+
+        private void CuocHenBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ThongKeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Homes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -202,5 +202,12 @@ namespace Dentistry_Management
         {
             Application.Exit();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Homes obj = new Homes();
+            obj.Show();
+            this.Close();
+        }
     }
 }
