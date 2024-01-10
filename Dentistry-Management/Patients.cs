@@ -184,5 +184,12 @@ namespace Dentistry_Management
                 BenhNhanDGV.DataSource = modify.Table(query);
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Homes obj = new Homes();
+            obj.Show();
+            this.Hide(); 
+        }
     }
 }

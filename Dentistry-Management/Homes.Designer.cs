@@ -35,31 +35,31 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.ThongKeBtn = new System.Windows.Forms.PictureBox();
+            this.ThuocBtn = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.CuocHenBtn = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.NhanVienBtn = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.NhaSiBtn = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.BenhNhanBtn = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.SoCuocHen = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
+            this.SoNhaSi = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.SoBenhNhan = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -70,12 +70,12 @@
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThongKeBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThuocBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CuocHenBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NhanVienBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NhaSiBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BenhNhanBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
@@ -95,16 +95,16 @@
             this.panel1.Controls.Add(this.pictureBox11);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.pictureBox10);
-            this.panel1.Controls.Add(this.pictureBox9);
+            this.panel1.Controls.Add(this.ThongKeBtn);
+            this.panel1.Controls.Add(this.ThuocBtn);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.pictureBox8);
+            this.panel1.Controls.Add(this.CuocHenBtn);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.pictureBox7);
+            this.panel1.Controls.Add(this.NhanVienBtn);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.pictureBox6);
+            this.panel1.Controls.Add(this.NhaSiBtn);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.BenhNhanBtn);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -132,6 +132,7 @@
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox11.TabIndex = 19;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // label8
             // 
@@ -155,25 +156,26 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Thuốc";
             // 
-            // pictureBox10
+            // ThongKeBtn
             // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(3, 407);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(79, 58);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 16;
-            this.pictureBox10.TabStop = false;
+            this.ThongKeBtn.Image = ((System.Drawing.Image)(resources.GetObject("ThongKeBtn.Image")));
+            this.ThongKeBtn.Location = new System.Drawing.Point(3, 407);
+            this.ThongKeBtn.Name = "ThongKeBtn";
+            this.ThongKeBtn.Size = new System.Drawing.Size(79, 58);
+            this.ThongKeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ThongKeBtn.TabIndex = 16;
+            this.ThongKeBtn.TabStop = false;
             // 
-            // pictureBox9
+            // ThuocBtn
             // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(3, 343);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(79, 58);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 15;
-            this.pictureBox9.TabStop = false;
+            this.ThuocBtn.Image = ((System.Drawing.Image)(resources.GetObject("ThuocBtn.Image")));
+            this.ThuocBtn.Location = new System.Drawing.Point(3, 343);
+            this.ThuocBtn.Name = "ThuocBtn";
+            this.ThuocBtn.Size = new System.Drawing.Size(79, 58);
+            this.ThuocBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ThuocBtn.TabIndex = 15;
+            this.ThuocBtn.TabStop = false;
+            this.ThuocBtn.Click += new System.EventHandler(this.ThuocBtn_Click);
             // 
             // label6
             // 
@@ -186,15 +188,15 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Cuộc hẹn";
             // 
-            // pictureBox8
+            // CuocHenBtn
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(3, 279);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(79, 58);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 13;
-            this.pictureBox8.TabStop = false;
+            this.CuocHenBtn.Image = ((System.Drawing.Image)(resources.GetObject("CuocHenBtn.Image")));
+            this.CuocHenBtn.Location = new System.Drawing.Point(3, 279);
+            this.CuocHenBtn.Name = "CuocHenBtn";
+            this.CuocHenBtn.Size = new System.Drawing.Size(79, 58);
+            this.CuocHenBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CuocHenBtn.TabIndex = 13;
+            this.CuocHenBtn.TabStop = false;
             // 
             // label5
             // 
@@ -207,15 +209,16 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Nhân viên";
             // 
-            // pictureBox7
+            // NhanVienBtn
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(3, 215);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(79, 58);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 11;
-            this.pictureBox7.TabStop = false;
+            this.NhanVienBtn.Image = ((System.Drawing.Image)(resources.GetObject("NhanVienBtn.Image")));
+            this.NhanVienBtn.Location = new System.Drawing.Point(3, 215);
+            this.NhanVienBtn.Name = "NhanVienBtn";
+            this.NhanVienBtn.Size = new System.Drawing.Size(79, 58);
+            this.NhanVienBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.NhanVienBtn.TabIndex = 11;
+            this.NhanVienBtn.TabStop = false;
+            this.NhanVienBtn.Click += new System.EventHandler(this.NhanVienBtn_Click);
             // 
             // label4
             // 
@@ -228,15 +231,16 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Nha sĩ";
             // 
-            // pictureBox6
+            // NhaSiBtn
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(3, 151);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(79, 58);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
+            this.NhaSiBtn.Image = ((System.Drawing.Image)(resources.GetObject("NhaSiBtn.Image")));
+            this.NhaSiBtn.Location = new System.Drawing.Point(3, 151);
+            this.NhaSiBtn.Name = "NhaSiBtn";
+            this.NhaSiBtn.Size = new System.Drawing.Size(79, 58);
+            this.NhaSiBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.NhaSiBtn.TabIndex = 9;
+            this.NhaSiBtn.TabStop = false;
+            this.NhaSiBtn.Click += new System.EventHandler(this.NhaSiBtn_Click);
             // 
             // label3
             // 
@@ -249,15 +253,16 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Bệnh nhân";
             // 
-            // pictureBox5
+            // BenhNhanBtn
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(3, 87);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(79, 58);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
+            this.BenhNhanBtn.Image = ((System.Drawing.Image)(resources.GetObject("BenhNhanBtn.Image")));
+            this.BenhNhanBtn.Location = new System.Drawing.Point(3, 87);
+            this.BenhNhanBtn.Name = "BenhNhanBtn";
+            this.BenhNhanBtn.Size = new System.Drawing.Size(79, 58);
+            this.BenhNhanBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BenhNhanBtn.TabIndex = 8;
+            this.BenhNhanBtn.TabStop = false;
+            this.BenhNhanBtn.Click += new System.EventHandler(this.BenhNhanBtn_Click);
             // 
             // pictureBox2
             // 
@@ -310,7 +315,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.SoCuocHen);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.pictureBox13);
             this.panel4.Location = new System.Drawing.Point(559, 38);
@@ -318,16 +323,16 @@
             this.panel4.Size = new System.Drawing.Size(229, 112);
             this.panel4.TabIndex = 9;
             // 
-            // label10
+            // SoCuocHen
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label10.Location = new System.Drawing.Point(61, 60);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 22);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Bệnh nhân";
+            this.SoCuocHen.AutoSize = true;
+            this.SoCuocHen.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoCuocHen.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.SoCuocHen.Location = new System.Drawing.Point(61, 60);
+            this.SoCuocHen.Name = "SoCuocHen";
+            this.SoCuocHen.Size = new System.Drawing.Size(111, 22);
+            this.SoCuocHen.TabIndex = 8;
+            this.SoCuocHen.Text = "Bệnh nhân";
             // 
             // label13
             // 
@@ -353,7 +358,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.label17);
+            this.panel7.Controls.Add(this.SoNhaSi);
             this.panel7.Controls.Add(this.label18);
             this.panel7.Controls.Add(this.pictureBox12);
             this.panel7.Location = new System.Drawing.Point(292, 38);
@@ -361,16 +366,16 @@
             this.panel7.Size = new System.Drawing.Size(229, 112);
             this.panel7.TabIndex = 9;
             // 
-            // label17
+            // SoNhaSi
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label17.Location = new System.Drawing.Point(61, 60);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(111, 22);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "Bệnh nhân";
+            this.SoNhaSi.AutoSize = true;
+            this.SoNhaSi.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoNhaSi.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.SoNhaSi.Location = new System.Drawing.Point(61, 60);
+            this.SoNhaSi.Name = "SoNhaSi";
+            this.SoNhaSi.Size = new System.Drawing.Size(111, 22);
+            this.SoNhaSi.TabIndex = 8;
+            this.SoNhaSi.Text = "Bệnh nhân";
             // 
             // label18
             // 
@@ -396,7 +401,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.SoBenhNhan);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Location = new System.Drawing.Point(23, 38);
@@ -404,16 +409,16 @@
             this.panel3.Size = new System.Drawing.Size(229, 112);
             this.panel3.TabIndex = 0;
             // 
-            // label12
+            // SoBenhNhan
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label12.Location = new System.Drawing.Point(61, 60);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(111, 22);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Bệnh nhân";
+            this.SoBenhNhan.AutoSize = true;
+            this.SoBenhNhan.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoBenhNhan.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.SoBenhNhan.Location = new System.Drawing.Point(61, 60);
+            this.SoBenhNhan.Name = "SoBenhNhan";
+            this.SoBenhNhan.Size = new System.Drawing.Size(111, 22);
+            this.SoBenhNhan.TabIndex = 8;
+            this.SoBenhNhan.Text = "Bệnh nhân";
             // 
             // label2
             // 
@@ -460,6 +465,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 54;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // bunifuElipse5
             // 
@@ -492,12 +498,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThongKeBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThuocBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CuocHenBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NhanVienBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NhaSiBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BenhNhanBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -524,16 +530,16 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox BenhNhanBtn;
+        private System.Windows.Forms.PictureBox NhaSiBtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox NhanVienBtn;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox ThuocBtn;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox CuocHenBtn;
+        private System.Windows.Forms.PictureBox ThongKeBtn;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -543,15 +549,15 @@
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label SoBenhNhan;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label SoCuocHen;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label SoNhaSi;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
