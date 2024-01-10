@@ -71,6 +71,7 @@
             this.thuocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qUANLYNHAKHOADataSet3 = new Dentistry_Management.QUANLYNHAKHOADataSet3();
             this.thuocTableAdapter = new Dentistry_Management.QUANLYNHAKHOADataSet3TableAdapters.ThuocTableAdapter();
+            this.nhaSiTableAdapter1 = new Dentistry_Management.QUANLYNHAKHOADataSet1TableAdapters.NhaSiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
@@ -417,6 +418,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
@@ -524,6 +526,10 @@
             // 
             this.thuocTableAdapter.ClearBeforeFill = true;
             // 
+            // nhaSiTableAdapter1
+            // 
+            this.nhaSiTableAdapter1.ClearBeforeFill = true;
+            // 
             // Medicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -615,5 +621,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tenThuocDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn xuatXuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn congDungDataGridViewTextBoxColumn;
+        private QUANLYNHAKHOADataSet1TableAdapters.NhaSiTableAdapter nhaSiTableAdapter1;
     }
 }
