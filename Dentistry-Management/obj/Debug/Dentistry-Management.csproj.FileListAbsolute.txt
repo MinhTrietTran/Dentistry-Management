@@ -71,3 +71,6 @@ C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\bin\De
 C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\obj\Debug\Dentistry_Management.Statistics.resources
 C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\obj\Debug\Dentistry_Management.WorkTimes.resources
+C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\obj\Debug\Dentistry_Management.DonThuoc.resources
+C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\obj\Debug\Dentistry_Management.Payment.resources
+C:\Users\Admin\Documents\GitHub\Dentistry-Management\Dentistry-Management\obj\Debug\Dentistry_Management.TreatmentPlan.resources

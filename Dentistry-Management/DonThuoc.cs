@@ -16,5 +16,12 @@ namespace Dentistry_Management
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Patients obj = new Patients();  
+            obj.Show();
+            this.Hide();
+        }
     }
 }

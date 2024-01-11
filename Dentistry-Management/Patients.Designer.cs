@@ -466,6 +466,7 @@
             this.KeHoachDieuTriBtn.Size = new System.Drawing.Size(145, 40);
             this.KeHoachDieuTriBtn.TabIndex = 51;
             this.KeHoachDieuTriBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.KeHoachDieuTriBtn.Click += new System.EventHandler(this.KeHoachDieuTriBtn_Click);
             // 
             // ThanhToanBtn
             // 
@@ -736,6 +737,7 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(103, 40);
             this.bunifuThinButton21.TabIndex = 89;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // Patients
             // 
