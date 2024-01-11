@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,8 +16,9 @@ namespace Dentistry_Management
         public Statistics()
         {
             InitializeComponent();
+            GetMaNS();
         }
-
+        SqlConnection conn = new SqlConnection(@"Data Source=THANHTRUNG\PC1;Initial Catalog=QUANLYNHAKHOA;Persist Security Info=True;User ID=sa;Password=heongusi22;");
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Homes obj = new Homes();
@@ -69,6 +71,48 @@ namespace Dentistry_Management
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void GetMaNS()
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT MaNS FROM NhaSi", conn);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("MaNS", typeof(int));
+            dt.Load(rdr);
+            MaNS.ValueMember = "MaNS";
+            MaNS.DataSource = dt;
+            conn.Close();
+        }
+        private void GetTenNS()
+        {
+            conn.Open();
+            string Query = "SELECT * FROM NhaSi WHERE MaNS = " +MaNS.SelectedValue.ToString()+  "";
+            SqlCommand cmd = new SqlCommand(Query, conn);
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            foreach(DataRow dr in dt.Rows)
+            {
+                TenNS.Text = dr["TenNS"].ToString();
+            }
+            conn.Close();
+        }
+        private void Clear()
+        {
+            MaNS.SelectedIndex = 0;
+            TenNS.Text = "";
+        }
+
+        private void Statistics_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MaNS_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            GetTenNS();
         }
     }
 }

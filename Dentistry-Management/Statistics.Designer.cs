@@ -58,7 +58,16 @@
             this.CuocHen = new System.Windows.Forms.Button();
             this.bunifuElipse7 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse8 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.Start = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.End = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.MaNS = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.TenNS = new System.Windows.Forms.TextBox();
+            this.Report = new System.Windows.Forms.RichTextBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -69,7 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.NhaSiBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BenhNhanBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse2
@@ -315,24 +323,24 @@
             // 
             // DieuTri
             // 
-            this.DieuTri.BackColor = System.Drawing.Color.Black;
-            this.DieuTri.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DieuTri.BackColor = System.Drawing.Color.SaddleBrown;
+            this.DieuTri.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DieuTri.ForeColor = System.Drawing.Color.White;
-            this.DieuTri.Location = new System.Drawing.Point(331, 82);
+            this.DieuTri.Location = new System.Drawing.Point(418, 471);
             this.DieuTri.Name = "DieuTri";
-            this.DieuTri.Size = new System.Drawing.Size(117, 127);
+            this.DieuTri.Size = new System.Drawing.Size(87, 95);
             this.DieuTri.TabIndex = 60;
             this.DieuTri.Text = "Điều trị";
             this.DieuTri.UseVisualStyleBackColor = false;
             // 
             // CuocHen
             // 
-            this.CuocHen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.CuocHen.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CuocHen.BackColor = System.Drawing.Color.Olive;
+            this.CuocHen.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CuocHen.ForeColor = System.Drawing.Color.White;
-            this.CuocHen.Location = new System.Drawing.Point(742, 82);
+            this.CuocHen.Location = new System.Drawing.Point(598, 471);
             this.CuocHen.Name = "CuocHen";
-            this.CuocHen.Size = new System.Drawing.Size(117, 127);
+            this.CuocHen.Size = new System.Drawing.Size(87, 95);
             this.CuocHen.TabIndex = 61;
             this.CuocHen.Text = "Cuộc hẹn";
             this.CuocHen.UseVisualStyleBackColor = false;
@@ -347,15 +355,118 @@
             this.bunifuElipse8.ElipseRadius = 35;
             this.bunifuElipse8.TargetControl = this.DieuTri;
             // 
-            // pictureBox3
+            // Start
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(200, 251);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(826, 349);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 62;
-            this.pictureBox3.TabStop = false;
+            this.Start.BackColor = System.Drawing.Color.SeaGreen;
+            this.Start.BorderRadius = 0;
+            this.Start.ForeColor = System.Drawing.Color.White;
+            this.Start.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Start.FormatCustom = null;
+            this.Start.Location = new System.Drawing.Point(232, 121);
+            this.Start.Name = "Start";
+            this.Start.Size = new System.Drawing.Size(153, 36);
+            this.Start.TabIndex = 62;
+            this.Start.Value = new System.DateTime(2024, 1, 11, 18, 32, 35, 542);
+            // 
+            // End
+            // 
+            this.End.BackColor = System.Drawing.Color.SeaGreen;
+            this.End.BorderRadius = 0;
+            this.End.ForeColor = System.Drawing.Color.White;
+            this.End.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.End.FormatCustom = null;
+            this.End.Location = new System.Drawing.Point(427, 121);
+            this.End.Name = "End";
+            this.End.Size = new System.Drawing.Size(155, 36);
+            this.End.TabIndex = 63;
+            this.End.Value = new System.DateTime(2024, 1, 11, 18, 32, 35, 542);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Navy;
+            this.label2.Location = new System.Drawing.Point(228, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 19);
+            this.label2.TabIndex = 64;
+            this.label2.Text = "Từ ngày";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Navy;
+            this.label10.Location = new System.Drawing.Point(423, 87);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(82, 19);
+            this.label10.TabIndex = 65;
+            this.label10.Text = "Đến ngày";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Navy;
+            this.label11.Location = new System.Drawing.Point(228, 190);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 19);
+            this.label11.TabIndex = 66;
+            this.label11.Text = "Mã nha sĩ";
+            // 
+            // MaNS
+            // 
+            this.MaNS.FormattingEnabled = true;
+            this.MaNS.Items.AddRange(new object[] {
+            "Thứ hai",
+            "Thứ ba",
+            "Thứ tư",
+            "Thứ năm",
+            "Thứ sáu",
+            "Thứ bảy",
+            "Chủ nhật"});
+            this.MaNS.Location = new System.Drawing.Point(232, 226);
+            this.MaNS.Name = "MaNS";
+            this.MaNS.Size = new System.Drawing.Size(107, 21);
+            this.MaNS.TabIndex = 67;
+            this.MaNS.SelectionChangeCommitted += new System.EventHandler(this.MaNS_SelectionChangeCommitted);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Navy;
+            this.label12.Location = new System.Drawing.Point(423, 190);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 19);
+            this.label12.TabIndex = 68;
+            this.label12.Text = "Tên nha sĩ";
+            // 
+            // TenNS
+            // 
+            this.TenNS.Location = new System.Drawing.Point(427, 226);
+            this.TenNS.Name = "TenNS";
+            this.TenNS.Size = new System.Drawing.Size(147, 20);
+            this.TenNS.TabIndex = 69;
+            // 
+            // Report
+            // 
+            this.Report.Location = new System.Drawing.Point(677, 121);
+            this.Report.Name = "Report";
+            this.Report.Size = new System.Drawing.Size(313, 329);
+            this.Report.TabIndex = 70;
+            this.Report.Text = "";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Navy;
+            this.label13.Location = new System.Drawing.Point(777, 87);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(98, 22);
+            this.label13.TabIndex = 71;
+            this.label13.Text = "Thống kê";
             // 
             // Statistics
             // 
@@ -363,16 +474,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 600);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.Report);
+            this.Controls.Add(this.TenNS);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.MaNS);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.End);
+            this.Controls.Add(this.Start);
             this.Controls.Add(this.CuocHen);
             this.Controls.Add(this.DieuTri);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Statistics";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Statistics";
+            this.Load += new System.EventHandler(this.Statistics_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -384,7 +505,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.NhaSiBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BenhNhanBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,6 +539,15 @@
         private System.Windows.Forms.Button DieuTri;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse7;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse8;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private Bunifu.Framework.UI.BunifuDatepicker End;
+        private Bunifu.Framework.UI.BunifuDatepicker Start;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TenNS;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox MaNS;
+        private System.Windows.Forms.RichTextBox Report;
+        private System.Windows.Forms.Label label13;
     }
 }
