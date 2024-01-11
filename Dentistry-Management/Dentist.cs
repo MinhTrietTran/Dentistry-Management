@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -17,14 +18,31 @@ namespace Dentistry_Management
         {
             InitializeComponent();
         }
-
+        public static string MaNSDangChon;
         Modify modify = new Modify();
+        Modify modify2 = new Modify();
         SqlConnection conn = new SqlConnection(@"Data Source=THANHTRUNG\PC1;Initial Catalog=QUANLYNHAKHOA;Persist Security Info=True;User ID=sa;Password=heongusi22;");
+
+        private void NhaSiDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (NhaSiDGV.Rows.Count > 1)
+            {
+                MaNS.Text = NhaSiDGV.SelectedRows[0].Cells[0].Value.ToString();
+                TenNS.Text = NhaSiDGV.SelectedRows[0].Cells[1].Value.ToString();
+                PhaiNS.SelectedItem = NhaSiDGV.SelectedRows[0].Cells[2].Value.ToString();
+                NgaySinhNS.Value = (DateTime)NhaSiDGV.SelectedRows[0].Cells[3].Value;
+                DienThoaiNS.Text = NhaSiDGV.SelectedRows[0].Cells[4].Value.ToString();
+                EmailNS.Text = NhaSiDGV.SelectedRows[0].Cells[5].Value.ToString();
+                DiaChiNS.Text = NhaSiDGV.SelectedRows[0].Cells[6].Value.ToString();
+            }
+        }
 
         private void Dentist_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qUANLYNHAKHOADataSet9.LichLamViec' table. You can move, or remove it, as needed.
+            //this.lichLamViecTableAdapter.Fill(this.qUANLYNHAKHOADataSet9.LichLamViec);
             // TODO: This line of code loads data into the 'qUANLYNHAKHOADataSet2.NhaSi' table. You can move, or remove it, as needed.
-            this.nhaSiTableAdapter.Fill(this.qUANLYNHAKHOADataSet2.NhaSi);
+            //this.nhaSiTableAdapter.Fill(this.qUANLYNHAKHOADataSet2.NhaSi);
             try
             {
                 NhaSiDGV.DataSource = modify.Table("SELECT * FROM NhaSi NS ");
@@ -33,6 +51,7 @@ namespace Dentistry_Management
             {
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
+            
         }
         // Clear text box
         private void Clear()
@@ -81,19 +100,7 @@ namespace Dentistry_Management
             }
         }
 
-        private void NhaSiDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (NhaSiDGV.Rows.Count > 1)
-            {
-                MaNS.Text = NhaSiDGV.SelectedRows[0].Cells[0].Value.ToString();
-                TenNS.Text = NhaSiDGV.SelectedRows[0].Cells[1].Value.ToString();
-                PhaiNS.SelectedItem = NhaSiDGV.SelectedRows[0].Cells[2].Value.ToString();
-                NgaySinhNS.Value = (DateTime)NhaSiDGV.SelectedRows[0].Cells[3].Value;
-                DienThoaiNS.Text = NhaSiDGV.SelectedRows[0].Cells[4].Value.ToString();
-                EmailNS.Text = NhaSiDGV.SelectedRows[0].Cells[5].Value.ToString();
-                DiaChiNS.Text = NhaSiDGV.SelectedRows[0].Cells[6].Value.ToString();
-            }
-        }
+     
 
         private void CapNhatBtn_Click(object sender, EventArgs e)
         {
@@ -135,8 +142,6 @@ namespace Dentistry_Management
             {
                 string choose = NhaSiDGV.SelectedRows[0].Cells[0].Value.ToString();
 
-                string query = "DELETE NhaSi ";
-                query += "WHERE TenNS = '" + choose + "'";
                 try
                 {
                     if (MessageBox.Show("Bạn có muốn xóa nha sĩ này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -175,8 +180,13 @@ namespace Dentistry_Management
             }
             else
             {
+                
+                
+                
                 string query = "SELECT * FROM NhaSi WHERE MaNS LIKE '%" + maNS + "%'";
                 NhaSiDGV.DataSource = modify.Table(query);
+                
+
             }
         }
 
@@ -228,5 +238,22 @@ namespace Dentistry_Management
             obj.Show();
             this.Close();
         }
+
+        private void ChiTietLichTrinhBtn_Click(object sender, EventArgs e)
+        {
+            if (NhaSiDGV.Rows.Count > 1)
+            {
+                MaNSDangChon = NhaSiDGV.SelectedRows[0].Cells[0].Value.ToString();
+                //MessageBox.Show(MaNSDangChon);
+                WorkTimes obj = new WorkTimes();
+                obj.Show();
+                
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn nha sĩ");
+            }
+        }
+
     }
 }

@@ -93,9 +93,6 @@
             this.GioCH2 = new System.Windows.Forms.DateTimePicker();
             this.MaCH = new System.Windows.Forms.TextBox();
             this.CuocHenDGV = new System.Windows.Forms.DataGridView();
-            this.qUANLYNHAKHOADataSet8 = new Dentistry_Management.QUANLYNHAKHOADataSet8();
-            this.cuocHenBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.cuocHenTableAdapter3 = new Dentistry_Management.QUANLYNHAKHOADataSet8TableAdapters.CuocHenTableAdapter();
             this.maCHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gioCHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thuTuCHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,6 +103,9 @@
             this.nhaSiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.troLyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuocHenBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.qUANLYNHAKHOADataSet8 = new Dentistry_Management.QUANLYNHAKHOADataSet8();
+            this.cuocHenTableAdapter3 = new Dentistry_Management.QUANLYNHAKHOADataSet8TableAdapters.CuocHenTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DangXuatBtn)).BeginInit();
@@ -125,8 +125,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CuocHenDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cuocHenBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet8)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse2
@@ -809,10 +809,10 @@
             // 
             // MaCH
             // 
-            this.MaCH.Location = new System.Drawing.Point(989, 172);
+            this.MaCH.Location = new System.Drawing.Point(820, 152);
             this.MaCH.Multiline = true;
             this.MaCH.Name = "MaCH";
-            this.MaCH.Size = new System.Drawing.Size(10, 31);
+            this.MaCH.Size = new System.Drawing.Size(40, 31);
             this.MaCH.TabIndex = 119;
             // 
             // CuocHenDGV
@@ -837,20 +837,6 @@
             this.CuocHenDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.CuocHenDGV.Size = new System.Drawing.Size(825, 297);
             this.CuocHenDGV.TabIndex = 120;
-            // 
-            // qUANLYNHAKHOADataSet8
-            // 
-            this.qUANLYNHAKHOADataSet8.DataSetName = "QUANLYNHAKHOADataSet8";
-            this.qUANLYNHAKHOADataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cuocHenBindingSource3
-            // 
-            this.cuocHenBindingSource3.DataMember = "CuocHen";
-            this.cuocHenBindingSource3.DataSource = this.qUANLYNHAKHOADataSet8;
-            // 
-            // cuocHenTableAdapter3
-            // 
-            this.cuocHenTableAdapter3.ClearBeforeFill = true;
             // 
             // maCHDataGridViewTextBoxColumn
             // 
@@ -912,6 +898,20 @@
             this.phongDataGridViewTextBoxColumn.DataPropertyName = "Phong";
             this.phongDataGridViewTextBoxColumn.HeaderText = "Phòng";
             this.phongDataGridViewTextBoxColumn.Name = "phongDataGridViewTextBoxColumn";
+            // 
+            // cuocHenBindingSource3
+            // 
+            this.cuocHenBindingSource3.DataMember = "CuocHen";
+            this.cuocHenBindingSource3.DataSource = this.qUANLYNHAKHOADataSet8;
+            // 
+            // qUANLYNHAKHOADataSet8
+            // 
+            this.qUANLYNHAKHOADataSet8.DataSetName = "QUANLYNHAKHOADataSet8";
+            this.qUANLYNHAKHOADataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cuocHenTableAdapter3
+            // 
+            this.cuocHenTableAdapter3.ClearBeforeFill = true;
             // 
             // Appointments
             // 
@@ -977,8 +977,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CuocHenDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cuocHenBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
