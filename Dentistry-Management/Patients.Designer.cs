@@ -85,6 +85,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.benhNhanTableAdapter = new Dentistry_Management.QUANLYNHAKHOADataSet4TableAdapters.BenhNhanTableAdapter();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -407,7 +408,7 @@
             this.CapNhatBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.CapNhatBtn.IdleForecolor = System.Drawing.Color.Black;
             this.CapNhatBtn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.CapNhatBtn.Location = new System.Drawing.Point(364, 253);
+            this.CapNhatBtn.Location = new System.Drawing.Point(346, 253);
             this.CapNhatBtn.Margin = new System.Windows.Forms.Padding(5);
             this.CapNhatBtn.Name = "CapNhatBtn";
             this.CapNhatBtn.Size = new System.Drawing.Size(91, 40);
@@ -433,7 +434,7 @@
             this.XoaBtn.IdleFillColor = System.Drawing.Color.DarkRed;
             this.XoaBtn.IdleForecolor = System.Drawing.Color.White;
             this.XoaBtn.IdleLineColor = System.Drawing.Color.DarkRed;
-            this.XoaBtn.Location = new System.Drawing.Point(527, 253);
+            this.XoaBtn.Location = new System.Drawing.Point(480, 253);
             this.XoaBtn.Margin = new System.Windows.Forms.Padding(5);
             this.XoaBtn.Name = "XoaBtn";
             this.XoaBtn.Size = new System.Drawing.Size(91, 40);
@@ -459,7 +460,7 @@
             this.KeHoachDieuTriBtn.IdleFillColor = System.Drawing.Color.Black;
             this.KeHoachDieuTriBtn.IdleForecolor = System.Drawing.Color.White;
             this.KeHoachDieuTriBtn.IdleLineColor = System.Drawing.Color.Black;
-            this.KeHoachDieuTriBtn.Location = new System.Drawing.Point(688, 253);
+            this.KeHoachDieuTriBtn.Location = new System.Drawing.Point(597, 253);
             this.KeHoachDieuTriBtn.Margin = new System.Windows.Forms.Padding(5);
             this.KeHoachDieuTriBtn.Name = "KeHoachDieuTriBtn";
             this.KeHoachDieuTriBtn.Size = new System.Drawing.Size(145, 40);
@@ -481,15 +482,16 @@
             this.ThanhToanBtn.ForeColor = System.Drawing.Color.SeaGreen;
             this.ThanhToanBtn.IdleBorderThickness = 1;
             this.ThanhToanBtn.IdleCornerRadius = 20;
-            this.ThanhToanBtn.IdleFillColor = System.Drawing.Color.DarkRed;
-            this.ThanhToanBtn.IdleForecolor = System.Drawing.Color.White;
-            this.ThanhToanBtn.IdleLineColor = System.Drawing.Color.DarkRed;
-            this.ThanhToanBtn.Location = new System.Drawing.Point(893, 253);
+            this.ThanhToanBtn.IdleFillColor = System.Drawing.Color.CornflowerBlue;
+            this.ThanhToanBtn.IdleForecolor = System.Drawing.Color.Black;
+            this.ThanhToanBtn.IdleLineColor = System.Drawing.Color.PaleTurquoise;
+            this.ThanhToanBtn.Location = new System.Drawing.Point(769, 253);
             this.ThanhToanBtn.Margin = new System.Windows.Forms.Padding(5);
             this.ThanhToanBtn.Name = "ThanhToanBtn";
             this.ThanhToanBtn.Size = new System.Drawing.Size(103, 40);
             this.ThanhToanBtn.TabIndex = 52;
             this.ThanhToanBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ThanhToanBtn.Click += new System.EventHandler(this.ThanhToanBtn_Click);
             // 
             // BenhNhanDGV
             // 
@@ -710,12 +712,38 @@
             this.bunifuElipse1.ElipseRadius = 35;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Đơn thuốc";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Plum;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Black;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Plum;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(907, 253);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(103, 40);
+            this.bunifuThinButton21.TabIndex = 89;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 600);
+            this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.NhaSiMacDinh);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.GhiChu);
@@ -823,5 +851,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ghiChuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nhaSiMacDinhDataGridViewTextBoxColumn;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
     }
 }

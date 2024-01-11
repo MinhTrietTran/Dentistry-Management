@@ -17,7 +17,7 @@ namespace Dentistry_Management
         {
             InitializeComponent();
         }
-
+        public static string MaBNDangDung;
         Modify modify = new Modify();
         SqlConnection conn = new SqlConnection(@"Data Source=THANHTRUNG\PC1;Initial Catalog=QUANLYNHAKHOA;Persist Security Info=True;User ID=sa;Password=heongusi22;");
 
@@ -232,6 +232,14 @@ namespace Dentistry_Management
             Login obj = new Login();
             obj.Show();
             this.Hide();
+        }
+
+        private void ThanhToanBtn_Click(object sender, EventArgs e)
+        {
+            MaBNDangDung = BenhNhanDGV.SelectedRows[0].Cells[0].Value.ToString();
+            //MessageBox.Show(MaNSDangChon);
+            Payment obj = new Payment();
+            obj.Show();
         }
     }
 }
