@@ -191,5 +191,47 @@ namespace Dentistry_Management
             obj.Show();
             this.Hide(); 
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Dentist obj = new Dentist();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Staffs obj = new Staffs();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Appointments obj = new Appointments();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Medicine obj = new Medicine();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Statistics obj = new Statistics();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
+        }
     }
 }
