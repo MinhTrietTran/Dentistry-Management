@@ -90,12 +90,16 @@ namespace Dentistry_Management
 
         private void CuocHenBtn_Click(object sender, EventArgs e)
         {
-
+            Appointments obj = new Appointments();
+            obj.Show();
+            this.Hide();
         }
 
         private void ThongKeBtn_Click(object sender, EventArgs e)
         {
-
+            Statistics obj = new Statistics();
+            obj.Show();
+            this.Hide();
         }
 
         private void Homes_Load(object sender, EventArgs e)
