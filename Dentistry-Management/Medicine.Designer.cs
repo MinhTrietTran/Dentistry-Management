@@ -486,7 +486,7 @@
             this.xuatXuDataGridViewTextBoxColumn,
             this.congDungDataGridViewTextBoxColumn});
             this.ThuocDGV.DataSource = this.thuocBindingSource;
-            this.ThuocDGV.Location = new System.Drawing.Point(200, 275);
+            this.ThuocDGV.Location = new System.Drawing.Point(200, 288);
             this.ThuocDGV.Name = "ThuocDGV";
             this.ThuocDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ThuocDGV.Size = new System.Drawing.Size(824, 309);

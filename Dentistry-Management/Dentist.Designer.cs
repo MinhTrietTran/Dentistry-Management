@@ -59,7 +59,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.DiaChiNS = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.ThemBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.CapNhatBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.XoaBtn = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -74,12 +73,14 @@
             this.diaChiNSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nhaSiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qUANLYNHAKHOADataSet2 = new Dentistry_Management.QUANLYNHAKHOADataSet2();
-            this.LichLamViecDGV = new System.Windows.Forms.DataGridView();
+            this.lichLamViecBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qUANLYNHAKHOADataSet9 = new Dentistry_Management.QUANLYNHAKHOADataSet9();
             this.label13 = new System.Windows.Forms.Label();
             this.nhaSiTableAdapter = new Dentistry_Management.QUANLYNHAKHOADataSet2TableAdapters.NhaSiTableAdapter();
             this.NgaySinhNS = new Bunifu.Framework.UI.BunifuDatepicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.lichLamViecTableAdapter = new Dentistry_Management.QUANLYNHAKHOADataSet9TableAdapters.LichLamViecTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -92,7 +93,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NhaSiDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhaSiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LichLamViecDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lichLamViecBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,7 +103,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Navy;
-            this.label17.Location = new System.Drawing.Point(536, 9);
+            this.label17.Location = new System.Drawing.Point(467, 74);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(86, 19);
             this.label17.TabIndex = 32;
@@ -113,7 +115,7 @@
             this.PhaiNS.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.PhaiNS.Location = new System.Drawing.Point(446, 44);
+            this.PhaiNS.Location = new System.Drawing.Point(354, 106);
             this.PhaiNS.Name = "PhaiNS";
             this.PhaiNS.Size = new System.Drawing.Size(69, 21);
             this.PhaiNS.TabIndex = 31;
@@ -123,7 +125,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Navy;
-            this.label16.Location = new System.Drawing.Point(442, 9);
+            this.label16.Location = new System.Drawing.Point(350, 71);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(73, 19);
             this.label16.TabIndex = 30;
@@ -131,7 +133,7 @@
             // 
             // TenNS
             // 
-            this.TenNS.Location = new System.Drawing.Point(212, 110);
+            this.TenNS.Location = new System.Drawing.Point(225, 174);
             this.TenNS.Name = "TenNS";
             this.TenNS.Size = new System.Drawing.Size(207, 20);
             this.TenNS.TabIndex = 29;
@@ -141,7 +143,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Navy;
-            this.label15.Location = new System.Drawing.Point(208, 87);
+            this.label15.Location = new System.Drawing.Point(221, 151);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(88, 19);
             this.label15.TabIndex = 28;
@@ -149,7 +151,7 @@
             // 
             // MaNS
             // 
-            this.MaNS.Location = new System.Drawing.Point(316, 45);
+            this.MaNS.Location = new System.Drawing.Point(224, 107);
             this.MaNS.Name = "MaNS";
             this.MaNS.Size = new System.Drawing.Size(103, 20);
             this.MaNS.TabIndex = 27;
@@ -160,7 +162,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(312, 12);
+            this.label1.Location = new System.Drawing.Point(220, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 19);
             this.label1.TabIndex = 26;
@@ -357,7 +359,7 @@
             // 
             // DienThoaiNS
             // 
-            this.DienThoaiNS.Location = new System.Drawing.Point(212, 172);
+            this.DienThoaiNS.Location = new System.Drawing.Point(765, 110);
             this.DienThoaiNS.Name = "DienThoaiNS";
             this.DienThoaiNS.Size = new System.Drawing.Size(207, 20);
             this.DienThoaiNS.TabIndex = 38;
@@ -367,7 +369,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(208, 149);
+            this.label2.Location = new System.Drawing.Point(761, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 19);
             this.label2.TabIndex = 37;
@@ -375,7 +377,7 @@
             // 
             // EmailNS
             // 
-            this.EmailNS.Location = new System.Drawing.Point(446, 110);
+            this.EmailNS.Location = new System.Drawing.Point(459, 174);
             this.EmailNS.Name = "EmailNS";
             this.EmailNS.Size = new System.Drawing.Size(207, 20);
             this.EmailNS.TabIndex = 40;
@@ -385,7 +387,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Navy;
-            this.label10.Location = new System.Drawing.Point(442, 87);
+            this.label10.Location = new System.Drawing.Point(455, 151);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 19);
             this.label10.TabIndex = 39;
@@ -393,7 +395,7 @@
             // 
             // DiaChiNS
             // 
-            this.DiaChiNS.Location = new System.Drawing.Point(446, 171);
+            this.DiaChiNS.Location = new System.Drawing.Point(761, 173);
             this.DiaChiNS.Name = "DiaChiNS";
             this.DiaChiNS.Size = new System.Drawing.Size(207, 20);
             this.DiaChiNS.TabIndex = 42;
@@ -403,22 +405,11 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Navy;
-            this.label11.Location = new System.Drawing.Point(446, 149);
+            this.label11.Location = new System.Drawing.Point(761, 151);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 19);
             this.label11.TabIndex = 41;
             this.label11.Text = "Địa chỉ";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Navy;
-            this.label12.Location = new System.Drawing.Point(699, 12);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(108, 19);
-            this.label12.TabIndex = 44;
-            this.label12.Text = "Lịch làm việc";
             // 
             // ThemBtn
             // 
@@ -522,6 +513,7 @@
             this.ChiTietLichTrinhBtn.Size = new System.Drawing.Size(190, 40);
             this.ChiTietLichTrinhBtn.TabIndex = 50;
             this.ChiTietLichTrinhBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ChiTietLichTrinhBtn.Click += new System.EventHandler(this.ChiTietLichTrinhBtn_Click);
             // 
             // NhaSiDGV
             // 
@@ -604,13 +596,15 @@
             this.qUANLYNHAKHOADataSet2.DataSetName = "QUANLYNHAKHOADataSet2";
             this.qUANLYNHAKHOADataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // LichLamViecDGV
+            // lichLamViecBindingSource
             // 
-            this.LichLamViecDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LichLamViecDGV.Location = new System.Drawing.Point(703, 45);
-            this.LichLamViecDGV.Name = "LichLamViecDGV";
-            this.LichLamViecDGV.Size = new System.Drawing.Size(245, 147);
-            this.LichLamViecDGV.TabIndex = 54;
+            this.lichLamViecBindingSource.DataMember = "LichLamViec";
+            this.lichLamViecBindingSource.DataSource = this.qUANLYNHAKHOADataSet9;
+            // 
+            // qUANLYNHAKHOADataSet9
+            // 
+            this.qUANLYNHAKHOADataSet9.DataSetName = "QUANLYNHAKHOADataSet9";
+            this.qUANLYNHAKHOADataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label13
             // 
@@ -635,7 +629,7 @@
             this.NgaySinhNS.ForeColor = System.Drawing.Color.White;
             this.NgaySinhNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.NgaySinhNS.FormatCustom = null;
-            this.NgaySinhNS.Location = new System.Drawing.Point(530, 41);
+            this.NgaySinhNS.Location = new System.Drawing.Point(461, 106);
             this.NgaySinhNS.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.NgaySinhNS.Name = "NgaySinhNS";
             this.NgaySinhNS.Size = new System.Drawing.Size(150, 31);
@@ -658,6 +652,10 @@
             this.bunifuElipse1.ElipseRadius = 35;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // lichLamViecTableAdapter
+            // 
+            this.lichLamViecTableAdapter.ClearBeforeFill = true;
+            // 
             // Dentist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -666,14 +664,12 @@
             this.ClientSize = new System.Drawing.Size(1024, 600);
             this.Controls.Add(this.NgaySinhNS);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.LichLamViecDGV);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.NhaSiDGV);
             this.Controls.Add(this.ChiTietLichTrinhBtn);
             this.Controls.Add(this.XoaBtn);
             this.Controls.Add(this.CapNhatBtn);
             this.Controls.Add(this.ThemBtn);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.DiaChiNS);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.EmailNS);
@@ -706,7 +702,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NhaSiDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhaSiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LichLamViecDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lichLamViecBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYNHAKHOADataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -743,13 +740,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox DiaChiNS;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private Bunifu.Framework.UI.BunifuThinButton2 ThemBtn;
         private Bunifu.Framework.UI.BunifuThinButton2 CapNhatBtn;
         private Bunifu.Framework.UI.BunifuThinButton2 XoaBtn;
         private Bunifu.Framework.UI.BunifuThinButton2 ChiTietLichTrinhBtn;
         private System.Windows.Forms.DataGridView NhaSiDGV;
-        private System.Windows.Forms.DataGridView LichLamViecDGV;
         private System.Windows.Forms.Label label13;
         private QUANLYNHAKHOADataSet2 qUANLYNHAKHOADataSet2;
         private System.Windows.Forms.BindingSource nhaSiBindingSource;
@@ -764,5 +759,8 @@
         private Bunifu.Framework.UI.BunifuDatepicker NgaySinhNS;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private QUANLYNHAKHOADataSet9 qUANLYNHAKHOADataSet9;
+        private System.Windows.Forms.BindingSource lichLamViecBindingSource;
+        private QUANLYNHAKHOADataSet9TableAdapters.LichLamViecTableAdapter lichLamViecTableAdapter;
     }
 }
