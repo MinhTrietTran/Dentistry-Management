@@ -24,7 +24,7 @@ namespace Dentistry_Management
 
         SqlConnection conn = new SqlConnection(@"Data Source=THANHTRUNG\PC1;Initial Catalog=QUANLYNHAKHOA;Persist Security Info=True;User ID=sa;Password=heongusi22;");
 
-
+    
         private void Clear()
         {
             ThuTrongTuan.Text = "";
