@@ -241,5 +241,19 @@ namespace Dentistry_Management
             Payment obj = new Payment();
             obj.Show();
         }
+
+        private void KeHoachDieuTriBtn_Click(object sender, EventArgs e)
+        {
+            MaBNDangDung = BenhNhanDGV.SelectedRows[0].Cells[0].Value.ToString();
+            TreatmentPlan obj = new TreatmentPlan();
+            obj.Show();
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            MaBNDangDung = BenhNhanDGV.SelectedRows[0].Cells[0].Value.ToString();
+            Payment obj = new Payment();
+            obj.Show();
+        }
     }
 }

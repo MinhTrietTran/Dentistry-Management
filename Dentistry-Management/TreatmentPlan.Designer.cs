@@ -60,6 +60,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,7 +167,7 @@
             this.textBox5.Location = new System.Drawing.Point(27, 166);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(380, 53);
+            this.textBox5.Size = new System.Drawing.Size(159, 53);
             this.textBox5.TabIndex = 21;
             // 
             // label5
@@ -207,7 +211,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(444, 144);
+            this.label7.Location = new System.Drawing.Point(222, 144);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 19);
             this.label7.TabIndex = 28;
@@ -215,10 +219,10 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(448, 166);
+            this.textBox8.Location = new System.Drawing.Point(226, 166);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(316, 53);
+            this.textBox8.Size = new System.Drawing.Size(160, 53);
             this.textBox8.TabIndex = 27;
             // 
             // label8
@@ -244,7 +248,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Navy;
-            this.label9.Location = new System.Drawing.Point(836, 64);
+            this.label9.Location = new System.Drawing.Point(836, 46);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(105, 19);
             this.label9.TabIndex = 31;
@@ -258,7 +262,7 @@
             this.NgaySinhBN.ForeColor = System.Drawing.Color.White;
             this.NgaySinhBN.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.NgaySinhBN.FormatCustom = null;
-            this.NgaySinhBN.Location = new System.Drawing.Point(840, 106);
+            this.NgaySinhBN.Location = new System.Drawing.Point(840, 75);
             this.NgaySinhBN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.NgaySinhBN.Name = "NgaySinhBN";
             this.NgaySinhBN.Size = new System.Drawing.Size(150, 31);
@@ -345,7 +349,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Navy;
-            this.label10.Location = new System.Drawing.Point(836, 154);
+            this.label10.Location = new System.Drawing.Point(836, 112);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(90, 19);
             this.label10.TabIndex = 83;
@@ -353,7 +357,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(840, 176);
+            this.textBox10.Location = new System.Drawing.Point(840, 134);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(150, 31);
@@ -409,12 +413,53 @@
             this.textBox11.Size = new System.Drawing.Size(172, 20);
             this.textBox11.TabIndex = 87;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(839, 177);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 19);
+            this.label3.TabIndex = 90;
+            this.label3.Text = "Mã thanh toán";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(840, 199);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(113, 20);
+            this.textBox4.TabIndex = 89;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Navy;
+            this.label14.Location = new System.Drawing.Point(438, 144);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(218, 19);
+            this.label14.TabIndex = 92;
+            this.label14.Text = "Danh sách răng cần điều trị";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(442, 166);
+            this.textBox12.Multiline = true;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(322, 53);
+            this.textBox12.TabIndex = 91;
+            // 
             // TreatmentPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 600);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.button1);
@@ -489,5 +534,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox12;
     }
 }

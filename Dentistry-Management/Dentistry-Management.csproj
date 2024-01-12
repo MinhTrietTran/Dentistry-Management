@@ -87,6 +87,29 @@
     <Compile Include="Dentist.Designer.cs">
       <DependentUpon>Dentist.cs</DependentUpon>
     </Compile>
+    <Compile Include="DonThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonThuoc.Designer.cs">
+      <DependentUpon>DonThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHAKHOADataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYNHAKHOADataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TreatmentPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreatmentPlan.Designer.cs">
+      <DependentUpon>TreatmentPlan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Homes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +218,9 @@
     <EmbeddedResource Include="Dentist.resx">
       <DependentUpon>Dentist.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DonThuoc.resx">
+      <DependentUpon>DonThuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Homes.resx">
       <DependentUpon>Homes.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Patients.resx">
       <DependentUpon>Patients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -221,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Statistics.resx">
       <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreatmentPlan.resx">
+      <DependentUpon>TreatmentPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkTimes.resx">
       <DependentUpon>WorkTimes.cs</DependentUpon>
@@ -267,6 +299,17 @@
     </None>
     <None Include="QUANLYNHAKHOADataSet10.xss">
       <DependentUpon>QUANLYNHAKHOADataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet11.xsc">
+      <DependentUpon>QUANLYNHAKHOADataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLYNHAKHOADataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet11.xss">
+      <DependentUpon>QUANLYNHAKHOADataSet11.xsd</DependentUpon>
     </None>
     <None Include="QUANLYNHAKHOADataSet2.xsc">
       <DependentUpon>QUANLYNHAKHOADataSet2.xsd</DependentUpon>
