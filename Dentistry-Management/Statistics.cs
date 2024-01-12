@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.HtmlRenderer.Adapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -107,12 +108,36 @@ namespace Dentistry_Management
 
         private void Statistics_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qUANLYNHAKHOADataSet11.CuocHen' table. You can move, or remove it, as needed.
+            this.cuocHenTableAdapter.Fill(this.qUANLYNHAKHOADataSet11.CuocHen);
 
         }
 
         private void MaNS_SelectionChangeCommitted(object sender, EventArgs e)
         {
             GetTenNS();
+        }
+
+        Modify modify = new Modify();
+        private void CuocHen_Click(object sender, EventArgs e)
+        {
+            TuaDe.Text = "Thống kê cuộc hẹn";
+            // Create a DataTable to hold the result set
+            DataTable dataTable = new DataTable();
+
+            conn.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter())
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM CuocHen WHERE CONVERT(DATE,GioCH) BETWEEN @NgayBatDau AND @NgayKetThuc AND (NhaSi = @MaNS OR TroLy = @MaNS))", conn);
+                cmd.Parameters.AddWithValue("@NgayBatDau", Start.Value.ToString());
+                cmd.Parameters.AddWithValue("@NgayKetThuc", End.Value.ToString());
+                cmd.Parameters.AddWithValue("@MaNS", MaNS.Text);
+                cmd.ExecuteNonQuery();
+                adapter.SelectCommand = cmd;
+                adapter.Fill(dataTable);
+            }
+            ThongKeDGV.DataSource = dataTable;
+            conn.Close();
         }
     }
 }

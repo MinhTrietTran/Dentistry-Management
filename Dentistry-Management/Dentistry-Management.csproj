@@ -99,6 +99,11 @@
     <Compile Include="Payment.Designer.cs">
       <DependentUpon>Payment.cs</DependentUpon>
     </Compile>
+    <Compile Include="QUANLYNHAKHOADataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYNHAKHOADataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TreatmentPlan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +299,17 @@
     </None>
     <None Include="QUANLYNHAKHOADataSet10.xss">
       <DependentUpon>QUANLYNHAKHOADataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet11.xsc">
+      <DependentUpon>QUANLYNHAKHOADataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLYNHAKHOADataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLYNHAKHOADataSet11.xss">
+      <DependentUpon>QUANLYNHAKHOADataSet11.xsd</DependentUpon>
     </None>
     <None Include="QUANLYNHAKHOADataSet2.xsc">
       <DependentUpon>QUANLYNHAKHOADataSet2.xsd</DependentUpon>
