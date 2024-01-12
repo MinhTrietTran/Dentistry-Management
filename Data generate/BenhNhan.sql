@@ -1,4 +1,6 @@
-﻿-- Thêm thông tin của 20 bệnh nhân
+﻿USE QUANLYNHAKHOA
+GO
+-- Thêm thông tin của 20 bệnh nhân
 INSERT INTO BenhNhan (TenBN, PhaiBN, DienThoaiBN, DiaChiBN, NgaySinhBN, ThongTinTongQuanSKRangMieng, GhiChu)
 VALUES
 (N'Nguyễn Minh An', N'Nam', N'0353776610', N'67 Nguyễn Hữu Cầu, Tánh Linh, Bình Thuận', N'2003-01-13', N'Răng số 6 bị sâu, răng không điều, răng khôn mọc lệch', N'Xem xét trám răng hoặc niềng răng'),

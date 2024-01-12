@@ -16,6 +16,12 @@ namespace Dentistry_Management
         public Medicine()
         {
             InitializeComponent();
+            if(Login.QuyenTruyCap == "NhaSi" || Login.QuyenTruyCap == "NhanVien")
+            {
+                ThemBtn.Enabled = false;
+                CapNhatBtn.Enabled = false;
+                XoaBtn.Enabled = false; ;
+            }    
         }
         Modify modify = new Modify();
         SqlConnection conn = new SqlConnection(@"Data Source=THANHTRUNG\PC1;Initial Catalog=QUANLYNHAKHOA;Persist Security Info=True;User ID=sa;Password=heongusi22;");
