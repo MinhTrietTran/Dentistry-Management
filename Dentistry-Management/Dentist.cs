@@ -17,6 +17,12 @@ namespace Dentistry_Management
         public Dentist()
         {
             InitializeComponent();
+            if (Login.QuyenTruyCap == "NhaSi")
+            {
+                XoaBtn.Enabled = false;
+                CapNhatBtn.Enabled = false;
+                ThemBtn.Enabled = false;
+            }
         }
         public static string MaNSDangChon;
         Modify modify = new Modify();

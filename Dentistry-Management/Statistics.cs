@@ -119,6 +119,7 @@ namespace Dentistry_Management
         }
 
         Modify modify = new Modify();
+        int tong = 0;
         private void CuocHen_Click(object sender, EventArgs e)
         {
             TuaDe.Text = "Thống kê cuộc hẹn";
@@ -128,16 +129,25 @@ namespace Dentistry_Management
             conn.Open();
             using (SqlDataAdapter adapter = new SqlDataAdapter())
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM CuocHen WHERE CONVERT(DATE,GioCH) BETWEEN @NgayBatDau AND @NgayKetThuc AND (NhaSi = @MaNS OR TroLy = @MaNS))", conn);
-                cmd.Parameters.AddWithValue("@NgayBatDau", Start.Value.ToString());
-                cmd.Parameters.AddWithValue("@NgayKetThuc", End.Value.ToString());
+                SqlCommand cmd = new SqlCommand("SELECT * FROM CuocHen WHERE CONVERT(DATE,GioCH) BETWEEN @NgayBatDau AND @NgayKetThuc AND (NhaSi = @MaNS OR TroLy = @MaNS)", conn);
+                cmd.Parameters.AddWithValue("@NgayBatDau", Start.Value.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@NgayKetThuc", End.Value.ToString("yyyy-MM-dd"));
                 cmd.Parameters.AddWithValue("@MaNS", MaNS.Text);
-                cmd.ExecuteNonQuery();
+                //cmd.ExecuteNonQuery();
                 adapter.SelectCommand = cmd;
                 adapter.Fill(dataTable);
+
+                SqlCommand cmd1 = new SqlCommand(" SELECT COUNT(*) FROM CuocHen WHERE CONVERT(DATE,GioCH) BETWEEN @NgayBatDau AND @NgayKetThuc AND (NhaSi = @MaNS OR TroLy = @MaNS)", conn);
+                
+                cmd1.Parameters.AddWithValue("@NgayBatDau", Start.Value.ToString("yyyy-MM-dd"));
+                cmd1.Parameters.AddWithValue("@NgayKetThuc", End.Value.ToString("yyyy-MM-dd"));
+                cmd1.Parameters.AddWithValue("@MaNS", MaNS.Text);
+                tong = (int)cmd1.ExecuteScalar();
+
             }
             ThongKeDGV.DataSource = dataTable;
             conn.Close();
+            Tong.Text = tong.ToString();
         }
     }
 }

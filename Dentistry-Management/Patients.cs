@@ -16,6 +16,12 @@ namespace Dentistry_Management
         public Patients()
         {
             InitializeComponent();
+            if (Login.QuyenTruyCap == "NhaSi")
+            {
+                XoaBtn.Enabled = false;
+                CapNhatBtn.Enabled = false;
+                Thembtn.Enabled = false;
+            }
         }
         public static string MaBNDangDung;
         Modify modify = new Modify();
@@ -24,7 +30,7 @@ namespace Dentistry_Management
         private void Patients_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'qUANLYNHAKHOADataSet4.BenhNhan' table. You can move, or remove it, as needed.
-            this.benhNhanTableAdapter.Fill(this.qUANLYNHAKHOADataSet4.BenhNhan);
+            //this.benhNhanTableAdapter.Fill(this.qUANLYNHAKHOADataSet4.BenhNhan);
             try
             {
                 BenhNhanDGV.DataSource = modify.Table("SELECT * FROM BenhNhan BN");
